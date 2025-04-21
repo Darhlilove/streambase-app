@@ -12,7 +12,7 @@ import {
 } from 'rxjs';
 import type { User, Admin } from '../models';
 import { LocalStorageService } from './local-storage.service';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { BanCheckService } from './ban-check.service';
 
 @Injectable({
@@ -441,23 +441,23 @@ export class AuthService {
   deleteProfile(password: string): Observable<void> {
     this._isLoading.set(true);
     const currentUser = this.localStorageUser.get() || this.sessionStorageUser.get()
-  
+
     if (!currentUser?.email) {
       this._isLoading.set(false);
       return throwError(() => new Error('No user is currently logged in.'));
     }
-  
+
     // Filter user by email and password
     return this.api
       .get<User[]>(`/users?email=${encodeURIComponent(currentUser.email)}&password=${encodeURIComponent(password)}`)
       .pipe(
         switchMap((matchedUsers) => {
           const user = matchedUsers[0];
-  
+
           if (!user) {
             throw new Error('Incorrect password. Account deletion canceled.');
           }
-  
+
           // Archive the user
           return this.api.post(`/archived-users`, user).pipe(
             // Then delete the user
@@ -481,7 +481,7 @@ export class AuthService {
         })
       );
   }
-  
+
 
   /**
    * Fetches user data based on the stored user ID.
