@@ -65,10 +65,14 @@ export class MovieSliderComponent implements AfterViewInit, OnDestroy {
     if (!this.sliderContainer?.nativeElement) return
 
     const containerWidth = this.sliderContainer.nativeElement.clientWidth
-    let itemsPerView = 6 // Default for large screens
+    let itemsPerView = 6.5 // Default for large screens
 
-    if (containerWidth < 600) {
-      itemsPerView = 3 // Mobile
+    if (containerWidth < 300) {
+      itemsPerView = 1 // Mobile
+    } else if (containerWidth < 500) {
+      itemsPerView = 2 // Tablet
+    } else if (containerWidth < 700) {
+      itemsPerView = 3 // Tablet
     } else if (containerWidth < 960) {
       itemsPerView = 4 // Tablet
     } else if (containerWidth < 1280) {
