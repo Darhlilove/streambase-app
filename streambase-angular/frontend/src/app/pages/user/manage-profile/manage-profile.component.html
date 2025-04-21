@@ -1,0 +1,237 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <h1>My Profile</h1>
+
+    @if (!isEditing()) {
+    <div class="profile-actions">
+      <app-custom-button
+        text="Edit Profile"
+        variant="info"
+        icon="edit"
+        size="small"
+        (buttonClick)="startEditing()"
+      ></app-custom-button>
+
+      <app-custom-button
+        text="Change Password"
+        variant="info"
+        icon="edit_note"
+        size="small"
+        (buttonClick)="startChangingPassword()"
+      ></app-custom-button>
+
+      <app-custom-button
+        text="Delete Account"
+        variant="danger"
+        icon="delete"
+        size="small"
+        (buttonClick)="openDeleteDialog()"
+      ></app-custom-button>
+    </div>
+    }
+  </div>
+
+  @if (isEditing()) {
+  <app-user-form
+    [user]="user()"
+    formType="profile"
+    [isSubmitting]="isSubmitting()"
+    [errorMessage]="errorMessage()"
+    (formSubmit)="updateProfile($event)"
+    (cancelEdit)="cancelEditing()"
+  ></app-user-form>
+  } @else if (isChangingPassword()) {
+  <form
+    [formGroup]="passwordForm"
+    (ngSubmit)="onPasswordSubmit($event)"
+    class="user-form"
+  >
+    <mat-form-field
+      appearance="outline"
+      class="full-width"
+      [ngClass]="{ 'with-error': passwordForm.get('currentPassword')?.invalid && passwordForm.get('currentPassword')?.touched }"
+    >
+      <mat-label>Current Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="currentPassword"
+        required
+      />
+      <mat-error
+        *ngIf="passwordForm.get('currentPassword')?.hasError('required')"
+      >
+        Current password is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field
+      appearance="outline"
+      class="full-width"
+      [ngClass]="{ 'with-error': passwordForm.get('newPassword')?.invalid && passwordForm.get('newPassword')?.touched }"
+    >
+      <mat-label>New Password</mat-label>
+      <input matInput type="password" formControlName="newPassword" required />
+      <mat-error *ngIf="passwordForm.get('newPassword')?.hasError('required')">
+        New password is required
+      </mat-error>
+      <mat-error *ngIf="passwordForm.get('newPassword')?.hasError('minlength')">
+        Minimum 8 characters
+      </mat-error>
+    </mat-form-field>
+
+    <div
+      *ngIf="
+        passwordForm.touched &&
+        passwordForm.hasError('newPasswordSameAsCurrent')
+      "
+      class="error-message"
+    >
+      Please provide a new password different from the old one
+    </div>
+
+    <mat-form-field
+      appearance="outline"
+      class="full-width"
+      [ngClass]="{ 'with-error': passwordForm.get('confirmPassword')?.invalid && passwordForm.get('confirmPassword')?.touched }"
+    >
+      <mat-label>Confirm New Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="confirmPassword"
+        required
+      />
+      <mat-error
+        *ngIf="passwordForm.get('confirmPassword')?.hasError('required')"
+      >
+        Confirm your new password
+      </mat-error>
+    </mat-form-field>
+
+    <div
+      *ngIf="passwordForm.hasError('passwordMismatch')"
+      class="error-message"
+    >
+      New passwords do not match
+    </div>
+
+    @if(errorMessage()){
+    <div class="error-message">{{ errorMessage() }}</div>
+    }
+
+    <div class="form-actions">
+      <button
+        type="button"
+        (click)="cancelChangingPassword()"
+        class="submit-button dark-button"
+      >
+        Cancel
+      </button>
+
+      <button
+        [disabled]="passwordForm.invalid"
+        type="submit"
+        class="submit-button primary-button"
+      >
+        Update Password
+      </button>
+    </div>
+  </form>
+  } @else {
+  <div class="two-column-grid">
+    <div
+      class="avatar-wrapper"
+      (mouseenter)="avatarHover = true"
+      (mouseleave)="avatarHover = false"
+    >
+      <app-user-avatar [user]="user()" [size]="80" />
+
+      <!-- Edit Icon Overlay (hidden by default) -->
+      @if(avatarHover){
+      <div class="edit-overlay" (click)="fileInput.click()">
+        <mat-icon>edit</mat-icon>
+      </div>
+      }
+
+      <!-- Hidden File Input -->
+      <input
+        #fileInput
+        type="file"
+        accept="image/*"
+        hidden
+        (change)="onFileSelected($event)"
+      />
+    </div>
+    <div class="profile-details">
+      <div class="profile-section">
+        <h2>Personal Information</h2>
+        <div class="profile-info">
+          <div class="info-item">
+            <span class="label">Name:</span>
+            <span class="value"
+              >{{ user()?.firstName }} {{ user()?.lastName }}</span
+            >
+          </div>
+          <div class="info-item">
+            <span class="label">Email:</span>
+            <span class="value">{{ user()?.email }}</span>
+          </div>
+          @if (user()?.dateOfBirth) {
+          <div class="info-item">
+            <span class="label">Date of Birth:</span>
+            <span class="value">{{
+              user()?.dateOfBirth | date : "mediumDate"
+            }}</span>
+          </div>
+          }
+        </div>
+      </div>
+
+      @if (user()?.bio) {
+      <div class="profile-section">
+        <h2>Bio</h2>
+        <p class="bio">{{ user()?.bio }}</p>
+      </div>
+      } @if (user()?.moviePreferences && user()?.moviePreferences!.length > 0) {
+      <div class="profile-section">
+        <h2>Favorite Genres</h2>
+        <div class="genres-list">
+          @for (genre of user()?.moviePreferences; track genre) {
+          <span class="genre-chip">{{ genre }}</span>
+          }
+        </div>
+      </div>
+      }
+
+      <div class="profile-section">
+        <h2>Account Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-value">{{ user()?.favorites?.length || 0 }}</span>
+            <span class="stat-label">Favorites</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">{{ user()?.watchlist?.length || 0 }}</span>
+            <span class="stat-label">Watchlist</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">{{
+              user()?.watchedList?.length || 0
+            }}</span>
+            <span class="stat-label">Watched</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">{{ user()?.followers?.length || 0 }}</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">{{ user()?.following?.length || 0 }}</span>
+            <span class="stat-label">Following</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

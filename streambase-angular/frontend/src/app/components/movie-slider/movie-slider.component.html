@@ -1,0 +1,42 @@
+<div class="slider-section">
+  <div class="slider-header">
+    <h2 class="slider-title">{{ title() }}</h2>
+  </div>
+
+  @if (error()) {
+  <div class="error-container">
+    <p>{{ error() }}</p>
+    <button mat-button color="primary">Retry</button>
+  </div>
+  } @else if (movies().length === 0) {
+  <div class="empty-container">
+    <p>No movies found</p>
+  </div>
+  } @else {
+  <div class="slider-container">
+    @if (showLeftArrow()) {
+    <button mat-icon-button class="nav-arrow left-arrow" (click)="scrollLeft()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    }
+
+    <div class="movies-slider" #sliderContainer (scroll)="onScroll($event)">
+      @for (movie of movies(); track movie.id) {
+      <div class="movie-item" [style.width.px]="itemWidth()">
+        <app-movie-card [movie]="movie" />
+      </div>
+      }
+    </div>
+
+    @if (showRightArrow()) {
+    <button
+      mat-icon-button
+      class="nav-arrow right-arrow"
+      (click)="scrollRight()"
+    >
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+    }
+  </div>
+  }
+</div>

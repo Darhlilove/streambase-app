@@ -1,0 +1,130 @@
+<div class="page-header">
+  <h1>Dashboard</h1>
+</div>
+<div class="dashboard">
+  <div class="insights">
+    <div class="card">
+      <h2>Total Movies</h2>
+      <p>{{ totalMovies() }}</p>
+    </div>
+    <div class="card">
+      <h2>Total TV Shows</h2>
+      <p>{{ totalTvShows() }}</p>
+    </div>
+    <div class="card">
+      <h2>Total Users</h2>
+      <p>{{ totalUsers() }}</p>
+    </div>
+    <div class="card">
+      <h2>Active Users</h2>
+      <p>{{ totalActiveUsers() }}</p>
+    </div>
+    <div class="card">
+      <h2>Suspended Users</h2>
+      <p>{{ totalSuspendedUsers() }}</p>
+    </div>
+  </div>
+
+  <div class="top-lists">
+    <div class="list">
+      <div class="header">
+        <h2>Top Favorites</h2>
+        <mat-icon>favorite</mat-icon>
+      </div>
+      <div class="movies slim-scroll">
+        @if (topFavorites().length === 0) {
+          <div class="movie-skeleton-list">
+            <div class="movie-skeleton-item" *ngFor="let item of skeletons">
+              <div class="skeleton-poster"></div>
+              <div class="skeleton-info">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-year"></div>
+              </div>
+            </div>
+          </div>
+        } @else {
+          @for(movie of topFavorites(); track movie.id) {
+          <app-movie-results [movie]="movie" (click)="handleMovieClick(movie)" />
+          }
+        }
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="header">
+        <h2>Top Watchlist</h2>
+        <mat-icon>bookmark</mat-icon>
+      </div>
+      <div class="movies slim-scroll">
+        @if (topWatchlist().length === 0) {
+          <div class="movie-skeleton-list">
+            <div class="movie-skeleton-item" *ngFor="let item of skeletons">
+              <div class="skeleton-poster"></div>
+              <div class="skeleton-info">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-year"></div>
+              </div>
+            </div>
+          </div>
+        } @else {
+        @for(movie of topWatchlist(); track movie.id) {
+        <app-movie-results [movie]="movie" (click)="handleMovieClick(movie)" />
+        }
+      }
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="header">
+        <h2>Top Watched</h2>
+        <mat-icon>history</mat-icon>
+      </div>
+      <div class="movies slim-scroll">
+        @if (topWatched().length === 0) {
+          <div class="movie-skeleton-list">
+            <div class="movie-skeleton-item" *ngFor="let item of skeletons">
+              <div class="skeleton-poster"></div>
+              <div class="skeleton-info">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-year"></div>
+              </div>
+            </div>
+          </div>
+        } @else {
+        @for(movie of topWatched(); track movie.id) {
+        <app-movie-results [movie]="movie" (click)="handleMovieClick(movie)" />
+        }
+      }
+      </div>
+    </div>
+  </div>
+
+  <div class="chart" *ngIf="chartData()">
+    <h2>Categorisation by Year and Media Type</h2>
+    <div class="chart-container">
+      <ngx-charts-bar-vertical-2d
+        [scheme]="'cool'"
+        [results]="chartData()"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Year'"
+        [yAxisLabel]="'Count'"
+        [gradient]="false"
+        [animations]="true"
+        [showGridLines]="true"
+        [xAxisTickFormatting]="formatXAxis"
+        [yAxisTickFormatting]="formatYAxis"
+        [barPadding]="20"
+        [groupPadding]="20"
+        [trimXAxisTicks]="false"
+        [trimYAxisTicks]="false"
+        [rotateXAxisTicks]="false"
+        [showDataLabel]="true"
+      >
+      </ngx-charts-bar-vertical-2d>
+    </div>
+  </div>
+</div>

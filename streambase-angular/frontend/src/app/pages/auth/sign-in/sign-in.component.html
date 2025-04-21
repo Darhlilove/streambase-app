@@ -1,0 +1,86 @@
+<app-auth-pages-container>
+  <div class="login-page-form">
+    <h2 class="typography-h5">{{ isAdmin() ? "Admin " : "" }} Sign In</h2>
+    <p class="typography-subtitle">
+      {{
+        isAdmin()
+          ? "Please sign in to access the admin panel"
+          : "Welcome to StreamBase"
+      }}
+    </p>
+
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="sign-in-form">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          formControlName="email"
+          placeholder="Email"
+          type="email"
+          autocomplete="email"
+        />
+        @if (signInForm.get('email')?.invalid &&
+        signInForm.get('email')?.touched) {
+        <mat-error class="error">Email is required</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          placeholder="Password"
+          type="password"
+          autocomplete="current-password"
+        />
+        @if (signInForm.get('password')?.invalid &&
+        signInForm.get('password')?.touched) {
+        <mat-error class="error">Password is required</mat-error>
+        }
+      </mat-form-field>
+
+      @if(isAdmin()) {
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Admin Pin</mat-label>
+        <input
+          matInput
+          formControlName="adminPin"
+          placeholder="Admin Pin"
+          type="password"
+        />
+        @if (signInForm.get('adminPin')?.invalid &&
+        signInForm.get('adminPin')?.touched) {
+        <mat-error class="error">Admin pin is required</mat-error>
+        }
+      </mat-form-field>
+      }
+
+      <div class="form-options">
+        <mat-checkbox formControlName="rememberMe" color="primary" />
+        <span class="remember">Remember me</span>
+      </div>
+
+      @if (errorMessage()) {
+      <div class="error-message">
+        {{ errorMessage() }}
+      </div>
+      }
+
+      <button
+        type="submit"
+        class="submit-button"
+        [disabled]="signInForm.invalid || isSubmitting()"
+      >
+        Sign In
+      </button>
+    </form>
+    
+    @if(!isAdmin()){
+      <div class="call-to-action">
+        Don't have an account?
+        <span class="action-link" (click)="navigateToSignUp()">Sign Up</span>
+      </div>
+    }
+  </div>
+</app-auth-pages-container>

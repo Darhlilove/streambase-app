@@ -1,0 +1,193 @@
+@use "theme" as *;
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 0px 100px;
+}
+
+.dashboard {
+  padding: 10px 100px 10px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.insights {
+  display: flex;
+  gap: 40px;
+
+  .card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #2a2929;
+    text-align: center;
+    max-width: 250px;
+    cursor: pointer;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.top-lists {
+  display: flex;
+  gap: 40px;
+
+  .list {
+    flex: 1;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #2a2929;
+
+    .header {
+      display: flex;
+      justify-content: flex-start;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      padding: 10px 0;
+
+      h4 {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .mat-icon {
+        color: $secondary-color;
+        font-size: 30px;
+        vertical-align: middle;
+        cursor: pointer;
+        transition: color 0.3s ease, transform 0.3s ease;
+        padding-right: 12px;
+        padding-bottom: 6px;
+      }
+    }
+
+    .movies {
+      max-height: 350px;
+      overflow-y: auto;
+    }
+
+    .slim-scroll {
+      overflow-y: auto;
+
+      /* WebKit (Chrome, Safari) */
+      &::-webkit-scrollbar {
+        width: 3px;
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(120, 120, 120, 0.5);
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.chart {
+  border: 1px solid #2a2929;
+  padding: 40px 0px 40px 40px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  /* New container CSS */
+  .chart-container {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+  }
+}
+
+/* Faint grid lines */
+:host ::ng-deep .gridline-path {
+  stroke: rgba(32, 32, 32, 0.5) !important;
+  stroke-width: 1px !important;
+}
+
+/* Axis labels visibility */
+:host ::ng-deep .axis-label text,
+:host ::ng-deep .tick text {
+  fill: #969595 !important; /* Dark color for contrast */
+  font-size: 16px !important;
+}
+
+/* Make axis lines visible */
+:host ::ng-deep .axis path,
+:host ::ng-deep .axis line {
+  stroke: rgba(32, 32, 32, 0.5) !important;
+}
+
+.movie-skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+}
+
+.movie-skeleton-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.skeleton-poster {
+  width: 60px;
+  height: 90px;
+  background-color: #333;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-title,
+.skeleton-year {
+  height: 24px;
+  background-color: #333;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-title {
+  width: 300px;
+}
+
+.skeleton-year {
+  width: 80px;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,91 @@
+<div class="page-container">
+  <div class="movie-list-container">
+    <div class="movie-list-header">
+      <h1>{{ title() }}</h1>
+
+      <div class="lists-filter">
+        <button
+          class="custom-toggle-button"
+          [class.active]="listToView() === 'favorites'"
+          (click)="loadMovies('favorites')"
+        >
+          {{ "Favorites" }}
+        </button>
+
+        <button
+          class="custom-toggle-button"
+          [class.active]="listToView() === 'watchlist'"
+          (click)="loadMovies('watchlist')"
+        >
+          {{ "Watchlist" }}
+        </button>
+
+        <button
+          class="custom-toggle-button"
+          [class.active]="listToView() === 'watchedList'"
+          (click)="loadMovies('watchedList')"
+        >
+          {{ "Watch History" }}
+        </button>
+      </div>
+
+      <div class="movie-list-actions">
+        <!-- Filter -->
+        <div class="search-field">
+          <label class="visually-hidden">Filter</label>
+          <input
+            type="text"
+            [ngModel]="filterText()"
+            (ngModelChange)="setFilterText($event)"
+            placeholder="Search by title, overview, or genre"
+          />
+          <mat-icon class="search-icon">search</mat-icon>
+        </div>
+        
+
+        <!-- Sort -->
+        <div class="custom-select-container">
+          <label for="sortSelect" class="visually-hidden">Sort by</label>
+          <div class="select-wrapper">
+            <select 
+              id="sortSelect"
+              class="custom-select"
+              [ngModel]="sortBy()"
+              (ngModelChange)="setSortBy($event)">
+              <option value="title">Title (A-Z)</option>
+              <option value="title-desc">Title (Z-A)</option>
+              <option value="rating">Rating (High-Low)</option>
+              <option value="rating-asc">Rating (Low-High)</option>
+              <option value="release-date">Release Date (Newest)</option>
+              <option value="release-date-asc">Release Date (Oldest)</option>
+            </select>
+            <div class="select-arrow">
+              <mat-icon>arrow_drop_down</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading State -->
+    @if (isLoading()) {
+    <div class="loading-container">
+      <mat-spinner diameter="40"></mat-spinner>
+      <p>Loading movies...</p>
+    </div>
+    } @else if (filteredMovies().length === 0) {
+    <!-- Empty State -->
+    <div class="empty-container">
+      <mat-icon class="empty-icon">movie_filter</mat-icon>
+      <p>{{ emptyMessage() }}</p>
+    </div>
+    } @else {
+    <!-- Movies Grid -->
+    <div class="movies-container" [class.grid-view]="true">
+      @for (movie of filteredMovies(); track movie.id) {
+      <app-movie-card [movie]="movie" [@fadeInOut] />
+      }
+    </div>
+    }
+  </div>
+</div>

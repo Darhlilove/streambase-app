@@ -1,0 +1,18 @@
+<div class="app-layout">
+  @if(!hideHeaderFooter()){
+  <header class="app-header">
+    <app-navigation />
+  </header>
+  }
+
+  <main class="app-content">
+    <router-outlet></router-outlet>
+    <app-snackbar />
+  </main>
+
+  @if(!hideHeaderFooter()){
+  <footer class="app-footer">
+    <app-footer />
+  </footer>
+  }
+</div>

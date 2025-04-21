@@ -1,0 +1,119 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@use 'app/styles/theme' as theme;
+
+// Using Quicksand font
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+// Include the common styles for Angular Material
+@include mat.core();
+
+// Define custom palettes
+$streambase-primary: mat.m2-define-palette((
+  50: #fff9e0,
+  100: #ffefb3,
+  200: #ffe480,
+  300: #ffd94d,
+  400: #ffcf26,
+  500: #FEB508,
+  600: #e6b800,
+  700: #d6a700,
+  800: #c79700,
+  900: #b88700,
+  contrast: (
+    50: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87),
+    200: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    400: rgba(0, 0, 0, 0.87),
+    500: rgba(0, 0, 0, 0.87),
+    600: rgba(0, 0, 0, 0.87),
+    700: rgba(0, 0, 0, 0.87),
+    800: rgba(0, 0, 0, 0.87),
+    900: rgba(0, 0, 0, 0.87),
+  )
+), 500);
+$streambase-accent: mat.m2-define-palette(
+  mat.$m2-grey-palette, 900);
+$streambase-warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+//Create the dark theme
+$streambase-dark-theme: mat.m2-define-dark-theme((
+  color: (
+    primary: $streambase-primary,
+    accent: $streambase-accent,
+    warn: $streambase-warn,
+  ),
+  density: 0,
+));
+
+// Create the light theme
+$streambase-light-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $streambase-primary,
+    accent: $streambase-accent,
+    warn: $streambase-warn,
+  ),
+  density: 0,
+));
+
+// Apply the dark theme by default (includes typography)
+@include mat.all-component-themes($streambase-dark-theme);
+
+// Apply only the color changes for light theme
+.light-theme {
+  @include mat.all-component-colors($streambase-light-theme);
+}
+
+Global styles
+html, :root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand, 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: #070501;
+}
+
+body {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.light-theme {
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+

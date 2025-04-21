@@ -1,0 +1,155 @@
+.search-bar-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0 8px 0 16px;
+  height: 36px;
+
+  input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .search-type-indicator {
+    display: flex;
+    align-items: center;
+
+    .search-type {
+      font-size: 14px;
+      color: #f5c518;
+      cursor: pointer;
+      margin-right: 4px;
+    }
+
+    .search-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5c518;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      // line-height: 28px;
+
+      mat-icon {
+        font-size: 18px;
+        height: 14px;
+        width: 14px;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .search-spinner {
+    margin-right: 8px;
+
+    ::ng-deep .mat-progress-spinner circle {
+      stroke: #f5c518;
+    }
+  }
+}
+
+.search-results {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1500;
+
+  .no-results {
+    padding: 16px;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.genre-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+
+  mat-chip {
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  }
+}
+
+::ng-deep .cdk-overlay-pane {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+
+// Dark theme styles
+:host-context(.dark-theme) {
+  .search-field {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    input {
+      color: white;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  .search-results {
+    background-color: #1e1e1e;
+
+    .search-result-item {
+      .movie-info {
+        .movie-title {
+          color: white;
+        }
+
+        .movie-year {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+
+    .no-results {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .search-bar-container {
+    .genre-chips {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+  }
+}

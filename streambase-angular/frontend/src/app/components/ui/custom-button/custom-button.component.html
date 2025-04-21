@@ -1,0 +1,25 @@
+<button 
+  [type]="type"
+  [disabled]="disabled"
+  [attr.aria-label]="ariaLabel || text"
+  [ngClass]="[
+    'custom-btn',
+    'btn-' + variant,
+    'btn-' + size,
+    fullWidth ? 'btn-full-width' : ''
+  ]"
+  (click)="onClick($event)">
+  
+  @if (icon && iconPosition === 'start') {
+    <mat-icon class="btn-icon btn-icon-start">{{ icon }}</mat-icon>
+  }
+  
+  @if (text) {
+    <span class="btn-text">{{ text }}</span>
+  }
+  
+  @if (icon && iconPosition === 'end') {
+    <mat-icon class="btn-icon btn-icon-end">{{ icon }}</mat-icon>
+  }
+</button>
+

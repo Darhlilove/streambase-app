@@ -1,0 +1,43 @@
+@use "theme" as *;
+
+.login-page-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px 60px;
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+
+.typography-h5 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.typography-subtitle {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.call-to-action {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+
+  .action-link {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover{
+      color: $secondary-color;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+<mat-toolbar color="primary" class="navigation-toolbar">
+  <div class="toolbar-container">
+    <div class="left-container">
+      <!-- Logo and brand -->
+      <div class="brand">
+        <a (click)="navigateToHome()" class="brand-link">
+          <img class="brand-logo" src="streambase-full-logo.svg" />
+        </a>
+      </div>
+
+      @if(isUser()){
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <!-- Request Movie -->
+        <a mat-button routerLink="/home" routerLinkActive="active"> Home </a>
+
+        <!-- My Lists -->
+        <a mat-button routerLink="/my-lists" routerLinkActive="active">
+          My Lists
+        </a>
+
+        <!-- Community -->
+        <a mat-button routerLink="/community" routerLinkActive="active">
+          Community
+        </a>
+
+        <!-- Request Movie -->
+        <a mat-button routerLink="/request-movie" routerLinkActive="active">
+          Request Movie
+        </a>
+      </nav>
+      }
+
+      <!-- Admin Links -->
+      @if(isAdmin()){
+      <nav class="nav-links">
+        <!-- Dashboard -->
+        <a mat-button routerLink="/admin-dashboard" routerLinkActive="active">
+          Dashboard
+        </a>
+
+        <!-- Users Management -->
+        <a
+          mat-button
+          routerLink="/admin-users-management"
+          routerLinkActive="active"
+        >
+          Users Management
+      </a>
+
+        <!-- Movie Requests -->
+        <a
+          mat-button
+          routerLink="/admin-movie-requests"
+          routerLinkActive="active"
+        >
+          Movie Requests
+        </a>
+      </nav>
+      }
+    </div>
+
+    <!-- Right Side Actions -->
+    <div class="right-actions">
+      <!-- Search Bar -->
+      <div class="search-container">
+        <app-movie-search-bar></app-movie-search-bar>
+      </div>
+
+      @if (isUser() || isAdmin()) {
+        <!-- User Actions -->
+        <div class="user-actions">
+          <!-- Notifications Menu -->
+          <app-notifications
+            [loggedIn]="isAdmin() || isUser()"
+            [user]="currentUser()"
+            [notifications]="notifications()()"
+          />
+  
+          <!-- User Menu -->
+          <button
+            mat-icon-button
+            [matMenuTriggerFor]="userMenu"
+            class="user-menu-button"
+          >
+            <app-user-avatar [user]="currentUser()" />
+          </button>
+        </div>
+      } @else {
+        <div class="user-actions">
+          <button
+            mat-raised-button
+            class="auth-button"
+            (click)="navigateToSignIn()"
+          >
+            SIGN IN
+          </button>
+          <button
+            mat-raised-button
+            class="auth-button"
+            (click)="navigateToSignUp()"
+          >
+            SIGN UP
+          </button>
+        </div>
+      }
+      
+    </div>
+  </div>
+</mat-toolbar>
+
+<!-- User Menu -->
+<mat-menu #userMenu="matMenu" class="user-menu">
+  <div class="user-info" *ngIf="currentUser()">
+    <div class="user-avatar">
+      <app-user-avatar [user]="currentUser()" [size]="48" />
+    </div>
+    <div class="user-details">
+      <h3>{{ currentUser()?.name }}</h3>
+      <p>{{ currentUser()?.email }}</p>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item (click)="navigateToProfile()">
+    <mat-icon>person</mat-icon>
+    <span>Profile</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>

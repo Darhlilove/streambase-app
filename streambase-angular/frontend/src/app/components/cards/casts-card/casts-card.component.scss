@@ -1,0 +1,100 @@
+.cast-card-container {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 100%;
+  // width: 250px;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.cast-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  
+  &.hovered {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.poster-container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+  
+  .cast-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .placeholder-photo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+  
+    mat-icon {
+      font-size: 80px; // or however large you want it
+      width:  80px;
+      height:  80px;
+      color: #9e9e9e;
+    }
+  }
+}
+
+mat-card-content {
+  padding: 16px;
+  flex-grow: 1;
+  text-align: center;
+    
+  .cast-title {
+    margin: 0 0 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .cast-character {
+    margin: 0;
+    color: rgba(169, 168, 168, 0.6);
+    font-size: 14px;
+  }
+
+  .italic-text {
+    font-size: 9px;
+    font-style: italic;
+    margin-right: 4px
+  }
+  
+}
+
+// Responsive styles
+@media (max-width: 599px) {
+  .cast-card-container {
+    &:hover {
+      transform: none;
+    }
+  }
+  
+  .poster-container .action-buttons {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+

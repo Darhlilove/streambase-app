@@ -1,0 +1,46 @@
+<div class="card-icons-container" [class]="size()" [style.--icons-direction]="direction()">
+  <button
+    mat-button
+    [class]="getButtonClass()"
+    [matTooltip]="isFavorite() ? 'Remove from Favorites' : 'Add to Favorites'"
+    matTooltipPosition="right"
+    matTooltipClass="small-tooltip"
+    (click)="toggleUserListAction($event, 'favorites')"
+    [color]="isFavorite() ? 'primary' : ''"
+    [disableRipple]="true"
+  >
+    <mat-icon [class]="getIconClass()">
+      {{ isFavorite() ? "favorite" : "favorite_border" }}
+    </mat-icon>
+  </button>
+
+  <button
+    mat-button
+    [class]="getButtonClass()"
+    [matTooltip]="isInWatchlist() ? 'Remove from Watchlist' : 'Add to Watchlist'"
+    matTooltipPosition="right"
+    matTooltipClass="small-tooltip"
+    (click)="toggleUserListAction($event, 'watchlist')"
+    [color]="isInWatchlist() ? 'primary' : ''"
+    [disableRipple]="true"
+  >
+    <mat-icon [class]="getIconClass()" inline="true">
+      {{ isInWatchlist() ? "bookmark" : "bookmark_border" }}
+    </mat-icon>
+  </button>
+
+  <button
+    mat-button
+    [class]="getButtonClass()"
+    [matTooltip]="isWatched() ?  '' : 'Mark as Watched'"
+    matTooltipPosition="right"
+    matTooltipClass="small-tooltip"
+    (click)="toggleUserListAction($event, 'watched')"
+    [color]="isWatched() ? 'primary' : ''"
+    [disableRipple]="true"
+  >
+    <mat-icon [class]="getIconClass()">
+      {{ isWatched() ? "visibility" : "visibility_outlined" }}
+    </mat-icon>
+  </button>
+</div>

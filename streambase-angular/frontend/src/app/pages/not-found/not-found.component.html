@@ -1,0 +1,20 @@
+<div class="not-found-wrapper mat-typography">
+  <div class="content" [@fadeIn]>
+    <mat-icon class="error-icon">error_outline</mat-icon>
+
+    <h2 class="title">Oops! Page Not Found.</h2>
+
+    <p class="subtitle">
+      We couldn't find the page you're looking for. But don't worry, we can help
+      you find your way back.
+    </p>
+
+    @if (showButton()) {
+    <div [@slideUpFade]>
+      <button class="go-back-button" (click)="handleRedirect()">
+        Go Back to Home
+      </button>
+    </div>
+    }
+  </div>
+</div>

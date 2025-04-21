@@ -1,0 +1,18 @@
+<app-auth-pages-container>
+    <div class="login-page-form">
+        <h2 class="typography-h5">Create an Account</h2>
+        <p class="typography-subtitle">Join StreamBase to track your favorite movies, create watchlists, and more.</p>
+      
+      <app-user-form
+        formType="register"
+        [isSubmitting]="isSubmitting()"
+        [errorMessage]="errorMessage()"
+        (formSubmit)="onRegister($event)"
+      ></app-user-form>
+      
+      <div class="call-to-action">
+        Already have an account? 
+        <span class="action-link" (click)="navigateToSignIn()">Sign In</span>
+      </div>
+    </div>
+</app-auth-pages-container>  

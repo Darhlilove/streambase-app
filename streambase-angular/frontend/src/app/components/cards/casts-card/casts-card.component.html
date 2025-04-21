@@ -1,0 +1,29 @@
+<div
+  class="cast-card-container"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+>
+  <mat-card class="cast-card" [class.hovered]="isHovered()">
+    <div class="poster-container">
+      @if (cast().profile_path) {
+      <img
+        [src]="'https://image.tmdb.org/t/p/w200' + cast().profile_path"
+        [alt]="cast().name || 'Unknown'"
+        class="cast-poster"
+        (error)="onImageError()"
+      />
+      } @else{
+      <div class="placeholder-photo">
+        <mat-icon>person</mat-icon>
+      </div>
+      }
+    </div>
+
+    <mat-card-content>
+      <h3 class="cast-title">{{ cast().name }}</h3>
+      <p class="cast-character">
+        <span class="italic-text">as</span>{{ cast().character }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

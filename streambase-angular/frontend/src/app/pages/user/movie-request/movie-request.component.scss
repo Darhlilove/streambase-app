@@ -1,0 +1,50 @@
+.movie-request-container {
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: var(--secondary-light);
+    text-align: center;
+  }
+  
+  .request-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .form-field {
+    margin-bottom: 25px;
+    width: 50%;
+    min-width: 200px;
+  }
+  
+  .submit-button {
+    width: 160px;
+    margin-top: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .form-field {
+      width: 100%;
+    }
+    
+    .movie-request-container {
+      padding: 20px;
+    }
+    
+    .title {
+      font-size: 20px;
+    }
+  }
+  
+  

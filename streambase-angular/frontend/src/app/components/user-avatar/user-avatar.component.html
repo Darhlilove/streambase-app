@@ -1,0 +1,12 @@
+<div class="user-avatar" [style.--avatar-size.px]="size()">
+  @if (user()?.image) {
+  <img [src]="baseUrl + user()?.image" alt="Profile Picture" />
+  } @else {
+  <div class="avatar-placeholder">
+    {{
+      user()?.name?.charAt(0)?.toUpperCase() ||
+        user()?.firstName?.charAt(0)?.toUpperCase()
+    }}
+  </div>
+  }
+</div>

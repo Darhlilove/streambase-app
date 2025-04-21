@@ -1,0 +1,96 @@
+<div class="home-page-container">
+  @if (!loading().trendingMovie && !loading().trendingTv && !loading().upcoming) {
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>World of Endless Entertainment</h1>
+        <p class="subtitle">
+          Binge-worthy movies, electrifying TV shows, and so much more
+        </p>
+        <p class="description">
+          No limits. No subscriptions. Just pure cinematic bliss!
+        </p>
+        <div class="hero-buttons">
+          <button mat-raised-button color="accent" (click)="navigateToSignUp()">
+            SIGN UP
+          </button>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Movie Sections -->
+  
+    <section class="movie-sections">
+      <!-- Trending Movies -->
+      <app-movie-slider
+        [title]="'Trending Now'"
+        [movies]="trendingMovies()"
+        [loading]="loading().trendingMovie"
+        [error]="error().trendingMovie"
+      >
+      </app-movie-slider>
+  
+      <!-- Trending Tv -->
+      <app-movie-slider
+        [title]="'Top Rated'"
+        [movies]="trendingTv()"
+        [loading]="loading().trendingTv"
+        [error]="error().trendingTv"
+      >
+      </app-movie-slider>
+  
+      <!-- Upcoming Movies -->
+      <app-movie-slider
+        [title]="'Coming Soon'"
+        [movies]="upcomingMovies()"
+        [loading]="loading().upcoming"
+        [error]="error().upcoming"
+      >
+      </app-movie-slider>
+    </section>
+  
+    <!-- Features Section -->
+    <section class="features-section">
+      <h2>Why Join StreamBase?</h2>
+      <div class="features-grid">
+        <mat-card class="feature-card">
+          <mat-icon>favorite</mat-icon>
+          <h3>Track Your Favorites</h3>
+          <p>Keep track of movies you love and want to watch</p>
+        </mat-card>
+  
+        <mat-card class="feature-card">
+          <mat-icon>people</mat-icon>
+          <h3>Join the Community</h3>
+          <p>Connect with other movie enthusiasts</p>
+        </mat-card>
+  
+        <mat-card class="feature-card">
+          <mat-icon>star</mat-icon>
+          <h3>Rate and Review</h3>
+          <p>Share your thoughts on movies with others</p>
+        </mat-card>
+  
+        <mat-card class="feature-card">
+          <mat-icon>notifications</mat-icon>
+          <h3>Stay Updated</h3>
+          <p>Get notified about new releases and recommendations</p>
+        </mat-card>
+      </div>
+    </section>
+  
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to start your movie journey?</h2>
+        <p>Join thousands of movie enthusiasts on StreamBase today!</p>
+        <button mat-raised-button color="accent" type="button" (click)="navigateToSignUp()">
+          Sign Up Now - For Free!
+        </button>
+      </div>
+    </section>
+  } @else {
+    <div class="spinner-container">
+      <mat-progress-spinner mode="indeterminate" color="accent" diameter="100"></mat-progress-spinner>
+    </div>
+  }
+</div>

@@ -1,0 +1,42 @@
+.delete-account-dialog {
+  min-width: 400px;
+  max-width: 500px;
+  background-color: #272522;
+  padding: 30px;
+}
+
+h2 {
+  color: #f44336;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.warning-text {
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  color: #f44336;
+  margin-top: 16px;
+  padding: 8px;
+  background-color: rgba(244, 67, 54, 0.1);
+  border-radius: 4px;
+}
+
+mat-dialog-actions {
+  display: flex;
+  gap: 12px;
+  margin-right: 20px;
+}
+
+mat-dialog-title{
+  color: #ffffff
+}
+

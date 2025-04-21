@@ -1,0 +1,24 @@
+<div class="search-result-item">
+    <img
+      [src]="
+        movie().poster_path
+          ? 'https://image.tmdb.org/t/p/original/' + movie().poster_path
+          : 'https://dummyimage.com/48x60/757575/757575.png'
+      "
+      alt="{{ movie().title || movie().name }}"
+      class="movie-poster"
+      (error)="onImageError($event)"
+    />
+    <div class="movie-info">
+      <span class="movie-title">{{ movie().title || movie().name }}</span>
+      <span class="movie-year">
+        {{
+          movie().release_date
+            ? (movie().release_date | date : "yyyy")
+            : movie().first_air_date
+            ? (movie().first_air_date | date : "yyyy")
+            : "..."
+        }}
+      </span>
+    </div>
+  </div>

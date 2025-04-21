@@ -1,0 +1,57 @@
+<div class="movie-request-container">
+  <h1 class="title">Request a Movie or TV Show to Be Added</h1>
+
+  <form [formGroup]="requestForm" class="request-form">
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Movie/TV Show Title</mat-label>
+      <input matInput formControlName="movieTitle" required />
+      @if(movieTitle?.errors?.['required']){
+        <mat-error>
+          Movie title is required
+        </mat-error>
+      }
+      @if(movieTitle?.errors?.['minlength']){
+        <mat-error>
+          Movie title must be at least 3 characters
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Media Type</mat-label>
+      <mat-select formControlName="mediaType" required>
+        <mat-option value="movie">Movie</mat-option>
+        <mat-option value="tv">TV Show</mat-option>
+      </mat-select>
+      @if(mediaType?.errors?.['required']){
+        <mat-error>
+          Please select media type
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Year of release</mat-label>
+      <input matInput formControlName="year" required />
+      @if(year?.errors?.['required']){
+        <mat-error>
+          Year is required
+        </mat-error>
+      }
+      @if(year?.errors?.['pattern']){
+        <mat-error>
+          Please enter a valid 4-digit year
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <app-custom-button
+      [text]="isSubmitting ? 'Submitting...' : 'Send Request'"
+      (click)="handleSubmitRequest()"
+      [disabled]="isSubmitting"
+      [fullWidth]="true"
+      size="large"
+    >
+    </app-custom-button>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-actions align="end">
+  <app-custom-button
+    text="Cancel"
+    variant="secondary"
+    mat-button
+    mat-dialog-close
+  />
+  <app-custom-button
+    text="Confirm"
+    variant="danger"
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="true"
+  />
+</mat-dialog-actions>

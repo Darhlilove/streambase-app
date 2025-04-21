@@ -1,0 +1,49 @@
+<div
+  class="image-list-item"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  (click)="navigateToMovie()"
+>
+  <img
+    [src]="posterUrl()"
+    [alt]="movie().title"
+    class="movie-poster"
+    (error)="onImageError()"
+  />
+
+  @if(rating() > 0){
+  <div class="rating-badge">
+    <span
+      [ngClass]="{
+        'high-rating': rating() >= 7,
+        'medium-rating': rating() >= 5 && rating() < 7,
+        'low-rating': rating() < 5
+      }"
+    >
+      {{ rating() }}
+    </span>
+  </div>
+  } @if (isHovered() && isLoggedIn()) {
+  <div
+    class="action-buttons"
+    [style.--top-position.px]="rating() > 0 ? '30' : '0'"
+  >
+    <app-card-icons [movie]="movie()" size="small" />
+  </div>
+  } @if (isHovered()) {
+  <div class="image-list-item-bar">
+    <div class="movie-info-container">
+      <div class="rating-box">
+        {{ movie().adult ? "PG-13" : "PG-18" }}
+      </div>
+      <span class="release-date">
+        {{
+          movie().release_date || movie().first_air_date | date : "MMMM yyyy"
+        }}
+      </span>
+      <div class="hd-box">HD</div>
+    </div>
+    <div class="title">{{ movie().title || movie().name }}</div>
+  </div>
+  }
+</div>

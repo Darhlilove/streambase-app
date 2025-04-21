@@ -1,0 +1,7 @@
+<div class="snackbar" *ngIf="message" [ngClass]="message.type">
+  <mat-icon class="icon">{{ getIcon(message.type) }}</mat-icon>
+  <span class="text">{{ message.text }}</span>
+  <button class="close-btn" (click)="dismiss()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

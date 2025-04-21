@@ -1,0 +1,39 @@
+@import "./styles/theme.scss";
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $background-color;
+  color: #fff;
+}
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 64px; /* Set explicit height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional shadow */
+}
+
+.app-content {
+  flex: 1;
+  padding: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: var(--content-margin-top, 64px); /* Push content below fixed header */
+}
+
+.app-footer {
+  padding: 12px;
+  width: 70%;
+  margin: 20px auto 0; /* Top margin for spacing */
+}
+
+

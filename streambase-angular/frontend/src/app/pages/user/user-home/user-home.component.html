@@ -1,0 +1,71 @@
+<div class="home-container">
+    <!-- Hero section with dynamic background -->
+    <div 
+      *ngIf="trendingMovies().length > 0"
+      class="hero-section"
+      [style.backgroundImage]="'url(https://image.tmdb.org/t/p/original/' + (trendingMovies()[count()].backdrop_path || '') + ')'"
+    >
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Welcome to Streambase</h1>
+        <p>Discover your next favorite movie or TV show</p>
+      </div>
+    </div>
+  
+    <!-- Main content -->
+     @if(isLoading()){
+       <div class="content-container">
+         <!-- Trending Movies Section -->
+         <div class="section">
+           <app-movie-slider
+             *ngIf="!loading().trendingMovies && !error().trendingMovies && trendingMovies().length > 0"
+             [movies]="trendingMovies()"
+             [title]="'Trending Movies'"
+           ></app-movie-slider>
+         </div>
+     
+         <!-- Trending TV Section -->
+         <div class="section">
+           <app-movie-slider
+             *ngIf="!loading().trendingTV && !error().trendingTV && trendingTV().length > 0"
+             [movies]="trendingTV()"
+             [title]="'Trending TV Shows'"
+           ></app-movie-slider>
+         </div>
+     
+         <!-- Upcoming Movies Section -->
+         <div class="section">
+           <app-movie-slider
+             *ngIf="!loading().upcoming && !error().upcoming && upcoming().length > 0"
+             [movies]="upcoming()"
+             [title]="'Upcoming Movies'"
+           ></app-movie-slider>
+         </div>
+     
+         <!-- Similar Movies Section -->
+         <div class="section">
+           <app-movie-slider
+             *ngIf="!loading().similarMovies && !error().similarMovies && similarMovies().length > 0"
+             [movies]="similarMovies()"
+             [title]="'Because you watched ' + userWatched().title"
+           ></app-movie-slider>
+         </div>
+     
+         <!-- Genre Sections - Load on demand -->
+         <ng-container *ngFor="let genre of genres">
+           <div class="section" (onVisible)="loadGenreMovies(genre.id)">
+             <app-movie-slider
+               *ngIf="!genreMovies[genre.id].loading && !genreMovies[genre.id].error && genreMovies[genre.id].movies.length > 0"
+               [movies]="genreMovies[genre.id].movies"
+               [title]="genre.name"
+             ></app-movie-slider>
+           </div>
+         </ng-container>
+       </div>
+     } @else {
+      <div class="loading-container">
+        <mat-progress-spinner diameter="40" mode="indeterminate"></mat-progress-spinner>
+      </div>
+     }
+  </div>
+  

@@ -1,0 +1,78 @@
+@if(!loading){
+<div class="community-container">
+  <!-- Left pane: User movies -->
+  <div class="movies-pane">
+    @if(selectedUser){
+    <h1>{{ selectedUser.firstName }}'s Movies</h1>
+    @if(selectedUserFavoriteMovies.length){
+    <app-movie-slider [movies]="selectedUserFavoriteMovies" title="Favorites" />
+    } @if(selectedUserWatchlistMovies.length){
+    <app-movie-slider
+      [movies]="selectedUserWatchlistMovies"
+      title="Watchlist"
+    />
+    } @if(selectedUserWatchedListMovies.length){
+    <app-movie-slider
+      [movies]="selectedUserWatchedListMovies"
+      title="Watched"
+    />
+    } } @else {
+    <p>No users to display in this view.</p>
+    }
+  </div>
+
+  <!-- Right pane: User list and search -->
+  <div class="user-pane">
+    <mat-button-toggle-group
+      class="full-width-toggle"
+      [value]="view"
+      (change)="handleViewChange($event.value)"
+      exclusive
+    >
+      <mat-button-toggle value="following">Following</mat-button-toggle>
+      <mat-button-toggle value="followers">Followers</mat-button-toggle>
+      <mat-button-toggle value="global">Global</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <div class="search-bar-container">
+      <div class="search-field">
+        <input
+          type="text"
+          [formControl]="searchControl"
+          placeholder="Search..."
+        />
+      </div>
+    </div>
+
+    <div class="users">
+      @for(user of filterUsers(); track user.email){
+      <div
+        (click)="handleUserClick(user)"
+        class="user-card"
+        [class.selected]="user.id === selectedUser?.id"
+      >
+        <app-user-avatar [user]="user" />
+        <div class="user-details">
+          <span>{{ user.firstName + " " + user.lastName }}</span>
+          @if(!isFollowing(user)){
+          <mat-icon matTooltip="Follow" (click)="handleFollow(user.id, $event)"
+            >person_add</mat-icon
+          >
+          } @else {
+          <mat-icon
+            matTooltip="Unfollow"
+            (click)="handleUnfollow(user.id, $event)"
+            >check_circle</mat-icon
+          >
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
+} @else {
+<div class="loading-container">
+  <mat-spinner diameter="80"></mat-spinner>
+</div>
+}

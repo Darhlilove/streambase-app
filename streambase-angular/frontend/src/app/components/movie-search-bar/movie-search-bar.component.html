@@ -1,0 +1,58 @@
+<div class="search-bar-container" [style.width]="width()">
+  <div class="search-field">
+    <input
+      #searchInput
+      type="text"
+      [formControl]="searchControl"
+      placeholder="Search"
+      autocomplete="off"
+      (focus)="makeResultsVisible()"
+      (blur)="closeResults()"
+    />
+    <div class="search-type-indicator" [matMenuTriggerFor]="filterMenu">
+      <span class="search-type">{{ searchType() }}</span>
+      <mat-icon class="search-button">arrow_drop_down</mat-icon>
+    </div>
+  </div>
+
+  <!-- Search Results -->
+  @if (showResults() && searchResults().length > 0) {
+  <div class="search-results">
+    @for (movie of searchResults(); track movie.id) {
+      <app-movie-results [movie]="movie" (click)="handleMovieClick(movie)"/>
+    }
+  </div>
+  } @else if (showResults() && searchResults().length === 0 && !isSearching()) {
+  <div class="search-results">
+    <div class="no-results">
+      @if (isSearchError()) {
+      <span>Something went wrong</span>
+      } @else {
+      <span>No results found</span>
+      }
+    </div>
+  </div>
+  }
+
+  <!-- Filter Menu -->
+  <mat-menu #filterMenu="matMenu">
+    @for (filter of filters; track filter) { @if (filter === "Genre"){
+    <button mat-menu-item [matMenuTriggerFor]="genreFilterMenu">
+      {{ filter }}
+    </button>
+    } @else {
+    <button mat-menu-item (click)="setSearchType(filter)">
+      {{ filter }}
+    </button>
+    } }
+  </mat-menu>
+
+  <!-- Filter Menu -->
+  <mat-menu #genreFilterMenu="matMenu">
+    @for (genre of genres; track genre) {
+    <button mat-menu-item (click)="setGenreSearchTerm(genre.name, genre.id)">
+      {{ genre.name }}
+    </button>
+    }
+  </mat-menu>
+</div>

@@ -1,0 +1,537 @@
+<div class="movie-detail-container">
+  @if (loading()) {
+  <div class="loading-container">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+  } @else if (error()) {
+  <div class="error-container">
+    <h2>{{ error() }}</h2>
+    <button mat-raised-button color="primary" routerLink="/">Go Home</button>
+  </div>
+  } @else if (movie()) {
+  <div class="movie-detail">
+    <!-- Background image with overlay -->
+    <div class="backdrop">
+      @if(backdropUrl()){
+      <img [src]="backdropUrl()" alt="" />
+      }
+      <div class="backdrop-overlay"></div>
+    </div>
+
+    <!-- Content container -->
+    <div class="content-container">
+      <!-- Movie poster -->
+      <div class="poster-container">
+        <div class="poster">
+          <img
+            [src]="posterUrl() || 'movie-placeholder.jpg'"
+            [alt]="movie()?.title || movie()?.name + ' poster'"
+          />
+        </div>
+      </div>
+
+      <!-- Movie details -->
+      <div class="details-container">
+        <!-- Title and year -->
+        <h1 class="movie-title">
+          {{ movie()?.title || movie()?.name }}
+          <span class="release-year">{{ "(" + releaseYear() + ")" }}</span>
+        </h1>
+
+        <!-- Tagline -->
+        <p class="tagline">{{ movie()?.tagline }}</p>
+
+        <!-- Rating -->
+        <div class="rating">
+          <div class="stars">
+            @for(star of stars; track star.index){
+            <ng-container>
+              <svg viewBox="0 0 24 24" class="star">
+                <defs>
+                  <linearGradient
+                    [attr.id]="'grad' + star.index"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop [attr.offset]="0 + '%'" stop-color="#f5c518" />
+                    <stop
+                      [attr.offset]="star.fill + '%'"
+                      stop-color="#f5c518"
+                    />
+                    <stop
+                      [attr.offset]="star.fill + '%'"
+                      stop-color="#e0e0e0"
+                    />
+                    <stop [attr.offset]="100 + '%'" stop-color="#e0e0e0" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  [attr.fill]="'url(#grad' + star.index + ')'"
+                />
+              </svg>
+            </ng-container>
+            }
+          </div>
+          <span class="rating-value">{{
+            ((movie()?.vote_average || 0) / 2).toFixed(1)
+          }}</span>
+        </div>
+
+        <!-- Genres -->
+        <div class="info-row">
+          <span class="label">Genres: </span>
+          <span class="value">{{ genres() }}</span>
+        </div>
+
+        <!-- Runtime -->
+        <div class="info-row">
+          <span class="label">{{
+            mediaType() === "movie" ? "Runtime: " : "Seasons & Episodes: "
+          }}</span>
+          <span class="value">{{
+            mediaType() === "movie" ? runtime() : seasons()
+          }}</span>
+        </div>
+
+        <!-- Release date -->
+        <div class="info-row">
+          <span class="label">Release Date: </span>
+          <span class="value">{{ movie()?.release_date || movie()?.first_air_date | date : "MMM d, yyyy" }}</span>
+        </div>
+
+        <!-- Status -->
+        <div class="info-row">
+          <span class="label">Status: </span>
+          <span class="value">{{ movie()?.status }}</span>
+        </div>
+
+        <!-- Overview -->
+        <div class="overview">
+          <span class="section-title">Overview</span>
+          <p class="overview-text">{{ movie()?.overview }}</p>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="action-buttons">
+          @if (isLoggedIn()) {
+          <app-card-icons
+            [movie]="movie()!"
+            [showLabels]="true"
+            size="medium"
+            direction="row"
+          >
+          </app-card-icons>
+          }
+        </div>
+
+        <!--Trailer-->
+        <div>
+          @if (trailerUrl()) {
+          <button mat-raised-button color="primary" (click)="playtrailer()">
+            <mat-icon>play_arrow</mat-icon>
+            Play Trailer
+          </button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="movie-tabs">
+    <mat-tab-group
+      [selectedIndex]="activeTab()"
+      (selectedIndexChange)="changeTab($event)"
+    >
+      <mat-tab label="Casts & Crew">
+        <div class="tab-content">
+          <div class="details-section">
+            @if (casts() && casts().length > 0) {
+            <div class="cast-list grid-view">
+              @for (actor of fullCast(); track actor.id) {
+              <app-casts-card [cast]="actor" />
+              }
+            </div>
+
+            <div class="button-wrapper">
+              <button mat-button color="primary" (click)="toggleCastList()">
+                {{ showFullCast() ? "Show Less" : "View Full Cast & Crew" }}
+              </button>
+            </div>
+            } @else {
+            <p>No cast information available</p>
+            }
+          </div>
+        </div>
+      </mat-tab>
+
+      @if(trailerUrl()){
+      <mat-tab label="Trailer">
+        <div class="tab-content">
+          <div class="trailer-container">
+            <iframe
+              [src]="trailerUrl()"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </mat-tab>
+      }
+
+      <mat-tab label="Reviews">
+        <div class="tab-content">
+          @if (reviews().length === 0) {
+          <div class="empty-reviews">
+            <!--Only show if there is no review, movie is not being reviewed and user is not super admin-->
+            @if(!isReviewingMovie() && !isAdmin()){
+            <p>No reviews yet</p>
+            <app-custom-button
+              text="Write a review"
+              (buttonClick)="isReviewingMovie.set(true)"
+            />
+            } @else if (!isAdmin()){
+            <!--Only show comment box if there is no review reviewing movie and user is not super admin-->
+            <ng-container
+              *ngTemplateOutlet="
+                reviewForm;
+                context: { isZeroReviews: true, mode: 'new' }
+              "
+            />
+            }
+          </div>
+          } @else { @if(isNewReviewAllow()){
+          <!--Only show if there are reviews but user has no review on the movie yet and the user is not super admin-->
+          <ng-container
+            *ngTemplateOutlet="
+              reviewForm;
+              context: { isZeroReviews: true, mode: 'new' }
+            "
+          />
+          <div class="margin-b">
+            <mat-divider></mat-divider>
+          </div>
+          }
+          <div class="reviews-list">
+            <!--Reviews Pane-->
+            @for (review of reviews(); track review.id) {
+            <!--In-line reviewing comment box when editing a review-->
+            @if(isReviewingMovie() && review.id === reviewBeingEdited){
+            <ng-container
+              *ngTemplateOutlet="reviewForm; context: { mode: 'edit' }"
+            />
+            } @else {
+            <div class="review-item">
+              <div class="review">
+                <div class="reviewer-info">
+                  <app-user-avatar [user]="review.user" [size]="60" />
+                  <div class="reviewer-details">
+                    <div class="review-header">
+                      <span class="reviewer-name">{{ review.user.name }}</span>
+                      <span class="review-date">{{
+                        formatDistanceToNow(review.updatedAt)
+                      }}</span>
+                    </div>
+                    @if(review.flagged){
+                    <div class="flagged">
+                      <mat-icon>block</mat-icon>
+                      <span
+                        ><em
+                          >This review has been flagged as inappropriate.</em
+                        ></span
+                      >
+                    </div>
+                    } @else {
+                    <span class="unflagged">{{ review.text }}</span>
+                    }
+                    <div class="review-rating">
+                      <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+                        <mat-icon>
+                          {{
+                            review.rating >= star
+                              ? "star"
+                              : review.rating >= star - 0.5
+                              ? "star_half"
+                              : "star_border"
+                          }}
+                        </mat-icon>
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+                <!--In-line menu trigger if review belongs to user or user is an admin-->
+                @if (review.user.email === currentUser()?.email || ["1",
+                "2"].includes(userPrivilege() ?? "") || isAdmin()) {
+                <div class="review-item-actions">
+                  <button mat-icon-button [matMenuTriggerFor]="reviewMenu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                </div>
+                }
+              </div>
+
+              <div class="review-replies">
+                @if(review.replies.length > 0) {
+                <!--In-line reply comment box if user has no reply and user is not a super admin-->
+                @if(commentingOn() === review.id){
+                <ng-container
+                  *ngTemplateOutlet="
+                    replyForm;
+                    context: { mode: 'new', review: review }
+                  "
+                />
+                } @else {
+                <div class="reply-actions">
+                  <!--Only show reply button if user has no reply and user is not a super admin-->
+                  @if(viewReplies() !== review.id && isReplyAllowed(review) &&
+                  !isAdmin()){
+                  <button (click)="commentingOn.set(review.id)">Reply</button>
+                  }
+                  <button (click)="toggleReplies(review.id)">
+                    {{
+                      viewReplies() === review.id
+                        ? "Hide Replies"
+                        : "View Replies (" + review.replies.length + ")"
+                    }}
+                  </button>
+                </div>
+                }
+                <!--View replies toggled on-->
+                @if (viewReplies() === review.id) {
+                <!--Replies Pane-->
+                @for (reply of getSortedReplies(review); track reply.replyId) {
+                <!--In-line editing box for user reply-->
+                @if(replyBeingEdited === reply.replyId){
+                <ng-container
+                  *ngTemplateOutlet="
+                    replyForm;
+                    context: { mode: 'edit', review: review, reply: reply }
+                  "
+                />
+                } @else {
+                <div class="reply-item">
+                  <app-user-avatar [user]="reply.replyUser" [size]="40" />
+                  <div class="reply-content">
+                    <div class="reply-header">
+                      <span class="reply-author">{{
+                        reply.replyUser.name
+                      }}</span>
+                      <span class="reply-date">{{
+                        formatDistanceToNow(reply.replyDate)
+                      }}</span>
+                    </div>
+                    @if(reply.flagged){
+                    <div class="flagged">
+                      <mat-icon>block</mat-icon>
+                      <span
+                        ><em
+                          >This reply has been flagged as inappropriate.</em
+                        ></span
+                      >
+                    </div>
+                    } @else {
+                    <p>{{ reply.replyText }}</p>
+                    }
+                  </div>
+                  <!--In-line menu trigger if reply belongs to user or user is an admin-->
+                  @if (reply.replyUser.email === currentUser()?.email || ["1",
+                  "2"].includes(userPrivilege() ?? "") || isAdmin()) {
+                  <div class="review-item-actions">
+                    <button mat-icon-button [matMenuTriggerFor]="replyMenu">
+                      <mat-icon>more_vert</mat-icon>
+                    </button>
+                  </div>
+                  }
+                </div>
+                }
+
+                <!-- Reply Menu definition -->
+                <mat-menu #replyMenu="matMenu">
+                  <!--User-owned reply actions-->
+                  @if(reply.replyUser.email === currentUser()?.email){
+                  <button mat-menu-item (click)="onEditReply(reply)">
+                    <mat-icon>edit</mat-icon>
+                    <span>Edit</span>
+                  </button>
+                  <button
+                    mat-menu-item
+                    (click)="deleteReply(review.id, reply.replyId)"
+                  >
+                    <mat-icon>delete</mat-icon>
+                    <span>Delete</span>
+                  </button>
+                  }
+                  <!--Admin actions-->
+                  @if((["1", "2"].includes(userPrivilege() ?? "") || isAdmin())
+                  && reply.replyUser.email !== currentUser()?.email){
+                  @if(reply.flagged){
+                  <button
+                    mat-menu-item
+                    (click)="handleFlagReply(review.id, reply.replyId, false)"
+                  >
+                    <mat-icon>check_circle</mat-icon>
+                    <span>Unflag</span>
+                  </button>
+                  } @else {
+                  <button
+                    mat-menu-item
+                    (click)="handleFlagReply(review.id, reply.replyId, true)"
+                  >
+                    <mat-icon>block</mat-icon>
+                    <span>Flag</span>
+                  </button>
+                  } }
+                </mat-menu>
+                } } } @else {
+                <!--New user review box-->
+                @if(commentingOn() === review.id){
+                <ng-container
+                  *ngTemplateOutlet="
+                    replyForm;
+                    context: { mode: 'new', review: review }
+                  "
+                />
+                } @else {
+                <!--Reply button for reviews user has no reply on and user is not super admin-->
+                <div class="reply-actions">
+                  @if(viewReplies() !== review.id && isReplyAllowed(review) &&
+                  !isAdmin()){
+                  <button (click)="commentingOn.set(review.id)">Reply</button>
+                  }
+                </div>
+                } }
+              </div>
+            </div>
+            }
+
+            <!-- Review Menu definition -->
+            <mat-menu #reviewMenu="matMenu">
+              <!--User-owned review actions-->
+              @if(review.user.email === currentUser()?.email){
+              <button mat-menu-item (click)="onEditReview(review)">
+                <mat-icon>edit</mat-icon>
+                <span>Edit</span>
+              </button>
+              <button mat-menu-item (click)="deleteReview(review.id)">
+                <mat-icon>delete</mat-icon>
+                <span>Delete</span>
+              </button>
+              }
+              <!--Admin actions-->
+              @if((["1", "2"].includes(userPrivilege() ?? "") || isAdmin()) &&
+              review.user.email !== currentUser()?.email){ @if(review.flagged){
+              <button
+                mat-menu-item
+                (click)="handleFlagReview(review.id, false)"
+              >
+                <mat-icon>check_circle</mat-icon>
+                <span>Unflag</span>
+              </button>
+              } @else {
+              <button mat-menu-item (click)="handleFlagReview(review.id, true)">
+                <mat-icon>block</mat-icon>
+                <span>Flag</span>
+              </button>
+              } }
+            </mat-menu>
+            }
+          </div>
+          }
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Recommendations" *ngIf="similarMovies().length > 0">
+        <div class="tab-content">
+          <div class="similar-movies-grid">
+            @for (movie of similarMovies(); track movie.id) {
+            <app-movie-card [movie]="movie" />
+            }
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  }
+</div>
+
+<!-- Review Form and Reply Form Templates -->
+<ng-template #reviewForm let-mode="mode" let-isZeroReviews="isZeroReviews">
+  <div class="review-form-container">
+    <mat-form-field appearance="outline" class="review-input">
+      <mat-label>Your Review</mat-label>
+      <textarea
+        matInput
+        rows="2"
+        [(ngModel)]="newReview"
+        [placeholder]="
+          mode === 'edit' ? 'Update your thoughts...' : 'Write your thoughts...'
+        "
+      ></textarea>
+    </mat-form-field>
+
+    <div class="review-footer">
+      <div class="review-rating mb">
+        <div class="star-rating" (mouseleave)="resetHover()">
+          <ng-container *ngFor="let star of ratingStars; let i = index">
+            <mat-icon
+              (click)="setRating(i + 1)"
+              (mouseenter)="hoverRating = i + 1"
+              [class.filled]="getStarFill(i)"
+              class="star"
+            >
+              {{ getStarIcon(i) }}
+            </mat-icon>
+          </ng-container>
+        </div>
+      </div>
+      <div class="review-edit-actions">
+        <app-custom-button
+          variant="secondary"
+          text="Cancel"
+          (buttonClick)="onCancelReview()"
+        />
+        <app-custom-button
+          [text]="mode === 'edit' ? 'Update' : 'Submit'"
+          (buttonClick)="
+            mode === 'edit'
+              ? editReview(reviewBeingEdited)
+              : handleReview(isZeroReviews)
+          "
+        />
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #replyForm let-review="review" let-mode="mode" let-reply="reply">
+  <div class="reply-form">
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        [placeholder]="
+          mode === 'new' ? 'Write a reply...' : 'Update your reply...'
+        "
+        [(ngModel)]="newReply"
+      />
+    </mat-form-field>
+    <div class="btns">
+      <button mat-button (click)="cancelReply()">Cancel</button>
+      <button
+        mat-button
+        color="primary"
+        (click)="
+          mode === 'new'
+            ? handleReplyReview(review.id)
+            : editReply(review.id, reply.replyId)
+        "
+      >
+        {{ mode === "new" ? "Reply" : "Update" }}
+      </button>
+    </div>
+  </div>
+</ng-template>

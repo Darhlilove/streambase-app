@@ -1,0 +1,87 @@
+@use "theme" as *;
+
+.sign-in-form {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-options {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.remember {
+  color: rgb(199, 198, 198);
+}
+
+.error {
+  font-size: 12px;
+}
+
+.login-page-form {
+  max-width: 500px;
+  margin: auto;
+  padding: 0px 60px 40px;
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+
+.typography-h5 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.typography-subtitle {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.call-to-action {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+
+  .action-link {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.submit-button {
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 48px;
+  width: 100%;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: $secondary-color;
+}

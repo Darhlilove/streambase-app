@@ -1,0 +1,226 @@
+@use 'theme' as *;
+
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.movie-list-container {
+  margin-top: 40px;
+  padding: 40px;
+  color: white;
+
+  .movie-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 32px;
+      margin: 0;
+      color: white;
+    }
+
+    .lists-filter{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .movie-list-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .filter-field {
+        width: 300px;
+      }
+
+      .sort-field {
+        width: 200px;
+      }
+
+      .view-mode-buttons {
+        display: flex;
+        gap: 8px;
+      }
+    }
+  }
+
+  .loading-container,
+  .empty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+
+    p {
+      margin-top: 16px;
+      font-size: 18px;
+      color: #aaa;
+    }
+  }
+
+  .empty-icon {
+    font-size: 64px;
+    height: 64px;
+    width: 64px;
+    color: #aaa;
+  }
+
+  .movies-container {
+    &.grid-view {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+      gap: 24px;
+    }
+
+    &.list-view {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
+
+.custom-toggle-button {
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #FEB508;
+  border-radius: 24px;
+  background-color: transparent;
+  color: #FEB508;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(254, 181, 8, 0.1);
+  }
+
+  &.active {
+    background-color: #FEB508;
+    color: #000;
+  }
+}
+
+:host ::ng-deep mat-form-field {
+  font-size: 14px;
+}
+
+::ng-deep .height{
+  height: 14px !important;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 0 8px 0 16px;
+  height: 40px;
+  width: 280px;
+  box-sizing: border-box;
+
+  input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+.search-icon {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+/* Hide label visually but keep it accessible for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+.custom-select-container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0 8px 0 16px;
+  box-sizing: border-box;
+}
+
+.select-label {
+  margin-right: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.custom-select {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  padding-right: 24px; /* Space for the arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.select-arrow mat-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hide default arrow in IE */
+.custom-select::-ms-expand {
+  display: none;
+}
+
+/* Option styling for better cross-browser compatibility */
+.custom-select option {
+  background-color: #333;
+  color: white;
+}
