@@ -1,0 +1,2597 @@
+{
+  "admin": [
+    {
+      "id": "Admin1",
+      "firstName": "Darhlilove",
+      "lastName": "Botchway",
+      "email": "darhlilove@admin.com",
+      "password": "Adm1nh@Ck#0",
+      "privilege": "3",
+      "pin": "3454328934",
+      "image": "/uploads/users/1744785816206-263149504.png"
+    }
+  ],
+  "archived-admin": [],
+  "users": [
+    {
+      "id": "6868",
+      "firstName": "Mac",
+      "lastName": "Zuck",
+      "bio": "Gentle giant",
+      "email": "db@example.com",
+      "dateOfBirth": "2000-04-02T05:00:00.000Z",
+      "password": "my@Adsfpassword123",
+      "image": "/uploads/users/1744785816206-263149504.png",
+      "moviePreferences": [
+        "Action",
+        "Adventure"
+      ],
+      "watchlist": [
+        {
+          "id": 850920,
+          "title": "The Parenting",
+          "media_type": "movie"
+        },
+        {
+          "id": 202555,
+          "title": "Daredevil: Born Again",
+          "media_type": "tv"
+        },
+        {
+          "id": 1241982,
+          "title": "Moana 2",
+          "media_type": "movie"
+        },
+        {
+          "id": 696506,
+          "title": "Mickey 17",
+          "media_type": "movie"
+        },
+        {
+          "id": 1424897,
+          "title": "Sidelines",
+          "media_type": "movie"
+        },
+        {
+          "id": 762509,
+          "title": "Mufasa: The Lion King",
+          "media_type": "movie"
+        },
+        {
+          "id": 939243,
+          "title": "Sonic the Hedgehog 3",
+          "media_type": "movie"
+        },
+        {
+          "id": 205596,
+          "title": "The Imitation Game",
+          "media_type": "movie"
+        },
+        {
+          "id": 822119,
+          "title": "Captain America: Brave New World",
+          "media_type": "movie"
+        }
+      ],
+      "favorites": [
+        {
+          "id": 202555,
+          "title": "Daredevil: Born Again",
+          "media_type": "tv"
+        },
+        {
+          "id": 111803,
+          "title": "The White Lotus",
+          "media_type": "tv"
+        },
+        {
+          "id": 1979,
+          "title": "Fantastic Four: Rise of the Silver Surfer",
+          "media_type": "movie"
+        },
+        {
+          "id": 950396,
+          "title": "The Gorge",
+          "media_type": "movie"
+        }
+      ],
+      "watchedList": [
+        {
+          "id": 202555,
+          "media_type": "tv"
+        },
+        {
+          "id": 1771,
+          "title": "Captain America: The First Avenger",
+          "media_type": "movie"
+        },
+        {
+          "id": 111803,
+          "media_type": "tv"
+        },
+        {
+          "id": 1438267,
+          "title": "Gamad Machmad 4",
+          "media_type": "movie"
+        },
+        {
+          "id": 549509,
+          "title": "The Brutalist",
+          "media_type": "movie"
+        },
+        {
+          "id": 95396,
+          "media_type": "tv"
+        },
+        {
+          "id": 157744,
+          "media_type": "tv"
+        },
+        {
+          "id": 209876,
+          "title": "Dope Thief",
+          "media_type": "tv"
+        },
+        {
+          "id": 71914,
+          "media_type": "tv"
+        },
+        {
+          "id": 1315476,
+          "title": "Paradiso",
+          "media_type": "movie"
+        },
+        {
+          "id": 850920,
+          "title": "The Parenting",
+          "media_type": "movie"
+        }
+      ],
+      "suspended": null,
+      "followers": [
+        "75ab",
+        "e6ec"
+      ],
+      "privilege": null
+    },
+    {
+      "id": "2",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "dateOfBirth": "2000-04-02T05:00:00.000Z",
+      "bio": "Gentle, cool, demure, and funny gal",
+      "image": "/uploads/users/1744785816206-263149504.png",
+      "email": "janesmith@gmail.com",
+      "watchList": [
+        {
+          "id": 285,
+          "title": "The Godfather",
+          "media_type": "movie"
+        }
+      ],
+      "watchedList": [
+        {
+          "id": 5508,
+          "title": "The Shawshank Redemption",
+          "media_type": "movie"
+        },
+        {
+          "id": 110,
+          "title": "Pulp Fiction",
+          "media_type": "movie"
+        }
+      ],
+      "following": [
+        1
+      ],
+      "followers": [
+        "e6ec"
+      ],
+      "privilege": "1",
+      "suspended": null
+    },
+    {
+      "id": "1z0",
+      "firstName": "John",
+      "lastName": "Daniels",
+      "email": "jdaniels@gmail.com",
+      "dateOfBirth": "2000-04-02T05:00:00.000Z",
+      "bio": "Gentle, cool, demure, and funny guy",
+      "password": "JohnDoe@1",
+      "moviePreferences": [
+        28,
+        35
+      ],
+      "image": "/uploads/users/1744785816206-263149504.png",
+      "favorites": [
+        {
+          "id": 822119,
+          "title": "Captain America: Brave New World",
+          "media_type": "movie"
+        },
+        {
+          "id": 696506,
+          "title": "Mickey 17",
+          "media_type": "movie"
+        },
+        {
+          "id": 1241982,
+          "title": "Moana 2",
+          "media_type": "movie"
+        }
+      ],
+      "watchList": [
+        {
+          "id": 822119,
+          "title": "Captain America: Brave New World",
+          "media_type": "movie"
+        },
+        {
+          "id": 696506,
+          "title": "Mickey 17",
+          "media_type": "movie"
+        },
+        {
+          "id": 1104845,
+          "title": "Plankton: The Movie",
+          "media_type": "movie"
+        },
+        {
+          "id": 1084199,
+          "title": "Companion",
+          "media_type": "movie"
+        },
+        {
+          "id": 1064213,
+          "title": "Anora",
+          "media_type": "movie"
+        },
+        {
+          "id": 127532,
+          "title": "Solo Leveling",
+          "media_type": "tv"
+        },
+        {
+          "id": 95396,
+          "title": "Severance",
+          "media_type": "tv"
+        },
+        {
+          "id": 245927,
+          "title": "Paradise",
+          "media_type": "tv"
+        },
+        {
+          "id": 202555,
+          "title": "Daredevil: Born Again",
+          "media_type": "tv"
+        },
+        {
+          "id": 108978,
+          "title": "Reacher",
+          "media_type": "tv"
+        },
+        {
+          "id": 157744,
+          "title": "The Lion King",
+          "media_type": "tv"
+        }
+      ],
+      "watchedList": [
+        {
+          "id": 285,
+          "title": "The Godfather",
+          "media_type": "movie"
+        },
+        {
+          "id": 5508,
+          "title": "The Shawshank Redemption",
+          "media_type": "movie"
+        },
+        {
+          "id": 110,
+          "title": "Pulp Fiction",
+          "media_type": "movie"
+        }
+      ],
+      "following": [
+        2,
+        13,
+        12,
+        "75ab",
+        "4zx9",
+        "c3d0q",
+        "e6ec"
+      ],
+      "followers": [
+        "4"
+      ],
+      "privilege": "2"
+    },
+    {
+      "id": "12la",
+      "firstName": "Gary",
+      "lastName": "Smith",
+      "image": "/uploads/users/1744785816206-263149504.png",
+      "email": "garysmith@gmail.com",
+      "dateOfBirth": "2000-04-02T05:00:00.000Z",
+      "bio": "Gentle, cool, demure, and funny gal",
+      "watchList": [],
+      "watchedList": [
+        {
+          "id": 299536,
+          "title": "Avengers: Infinity War",
+          "media_type": "movie"
+        },
+        {
+          "id": 154,
+          "title": "The Dark Knight",
+          "media_type": "movie"
+        }
+      ],
+      "following": [
+        1
+      ],
+      "followers": [
+        "75ab"
+      ]
+    },
+    {
+      "id": "13qw0",
+      "firstName": "Alice",
+      "lastName": "Brown",
+      "image": "/uploads/users/1744785816206-263149504.png",
+      "email": "alicebrown@gmail.com",
+      "watchList": [
+        {
+          "id": 299536,
+          "title": "Avengers: Infinity War",
+          "media_type": "movie"
+        },
+        {
+          "id": 154,
+          "title": "The Dark Knight",
+          "media_type": "movie"
+        },
+        {
+          "id": 680,
+          "title": "The Matrix",
+          "media_type": "movie"
+        },
+        {
+          "id": 118340,
+          "title": "Interstellar",
+          "media_type": "movie"
+        }
+      ],
+      "watchedList": [],
+      "following": [
+        1
+      ],
+      "followers": []
+    },
+    {
+      "id": "4zx9",
+      "firstName": "Bob",
+      "lastName": "White",
+      "image": "/uploads/users/1744785816206-263149504.png",
+      "email": "bobwhite@gmail.com",
+      "dateOfBirth": "2000-04-02T05:00:00.000Z",
+      "bio": "Gentle, cool, demure, and funny guy",
+      "watchList": [
+        {
+          "id": 680,
+          "title": "The Matrix",
+          "media_type": "movie"
+        },
+        {
+          "id": 157336,
+          "title": "Guardians of the Galaxy",
+          "media_type": "movie"
+        }
+      ],
+      "watchedList": [
+        {
+          "id": 118340,
+          "title": "Interstellar",
+          "media_type": "movie"
+        }
+      ],
+      "following": [],
+      "followers": [
+        "1z0"
+      ]
+    },
+    {
+      "firstName": "Dany",
+      "lastName": "Mason",
+      "email": "dany@gmail.com",
+      "dateOfBirth": "2000-04-02T05:00:00.000Z",
+      "bio": "Gentle, cool, demure, and funny guy",
+      "password": "maxImuS123$",
+      "moviePreferences": [
+        28
+      ],
+      "image": "/uploads/users/1744785816206-263149504.png",
+      "id": "75ab",
+      "privilege": null,
+      "favorites": [
+        {
+          "id": 1013601,
+          "title": "The Alto Knights",
+          "media_type": "movie"
+        },
+        {
+          "id": 95396,
+          "title": "Severance",
+          "media_type": "tv"
+        },
+        {
+          "id": 822119,
+          "title": "Captain America: Brave New World",
+          "media_type": "movie"
+        },
+        {
+          "id": 157744,
+          "title": "1923",
+          "media_type": "tv"
+        }
+      ],
+      "watchlist": [],
+      "watchedList": [
+        {
+          "id": 1064213,
+          "title": "Anora",
+          "media_type": "movie"
+        },
+        {
+          "id": 822119,
+          "title": "Captain America: Brave New World",
+          "media_type": "movie"
+        },
+        {
+          "id": 1241982,
+          "title": "Moana 2",
+          "media_type": "movie"
+        },
+        {
+          "id": 823219,
+          "title": "Flow",
+          "media_type": "movie"
+        },
+        {
+          "id": 516729,
+          "title": "Paddington in Peru",
+          "media_type": "movie"
+        },
+        {
+          "id": 2502,
+          "title": "The Bourne Supremacy",
+          "media_type": "movie"
+        },
+        {
+          "id": 950396,
+          "title": "The Gorge",
+          "media_type": "movie"
+        },
+        {
+          "id": 209876,
+          "media_type": "tv"
+        },
+        {
+          "id": 157744,
+          "media_type": "tv"
+        },
+        {
+          "id": 95557,
+          "media_type": "tv"
+        },
+        {
+          "id": 1442308,
+          "title": "Urtajo",
+          "media_type": "movie"
+        },
+        {
+          "id": 777443,
+          "title": "The Electric State",
+          "media_type": "movie"
+        },
+        {
+          "id": 2503,
+          "title": "The Bourne Ultimatum",
+          "media_type": "movie"
+        },
+        {
+          "id": 850920,
+          "title": "The Parenting",
+          "media_type": "movie"
+        },
+        {
+          "id": 98,
+          "title": "Gladiator",
+          "media_type": "movie"
+        },
+        {
+          "id": 447273,
+          "title": "Snow White",
+          "media_type": "movie"
+        },
+        {
+          "id": 549509,
+          "title": "The Brutalist",
+          "media_type": "movie"
+        },
+        {
+          "id": 627336,
+          "title": "Empuraan",
+          "media_type": "movie"
+        }
+      ],
+      "following": [
+        "6868",
+        "12la"
+      ],
+      "followers": [
+        "1z0"
+      ]
+    },
+    {
+      "id": "c3d0q",
+      "email": "johnnynickels@hotmail.com",
+      "firstName": "Johnny",
+      "lastName": "Nickels",
+      "dateOfBirth": "2000-04-02T05:00:00.000Z",
+      "bio": "Gentle, cool, demure, and funny guy",
+      "password": "sT@bleN1ck",
+      "confirmPassword": "sT@bleN1ck",
+      "moviePreferences": [
+        12,
+        35
+      ],
+      "favorites": [
+        {
+          "id": "1197306",
+          "title": "A Working Man",
+          "media_type": "movie"
+        }
+      ],
+      "followers": [
+        "e6ec",
+        "1z0"
+      ],
+      "privilege": null
+    },
+    {
+      "firstName": "Mike",
+      "lastName": "Ann",
+      "email": "mikeann@gmail.com",
+      "password": "asdfghjkl",
+      "dateOfBirth": "2000-04-02T05:00:00.000Z",
+      "bio": "Gentle, cool, demure, and funny guy!",
+      "privilege": "1",
+      "suspended": null,
+      "moviePreferences": [
+        "action",
+        "animation",
+        "comedy",
+        "documentary",
+        "history"
+      ],
+      "id": "e6ec",
+      "favorites": [
+        {
+          "id": "950387",
+          "title": "A Minecraft Movie",
+          "media_type": "movie"
+        },
+        {
+          "id": "257094",
+          "title": "Holland",
+          "media_type": "movie"
+        },
+        {
+          "id": "696506",
+          "title": "Mickey 17",
+          "media_type": "movie"
+        }
+      ],
+      "watchlist": [
+        {
+          "id": "950387",
+          "title": "A Minecraft Movie",
+          "media_type": "movie"
+        },
+        {
+          "id": "229711",
+          "title": "The Bondsman",
+          "media_type": "tv"
+        },
+        {
+          "id": "71914",
+          "title": "The Wheel of Time",
+          "media_type": "tv"
+        },
+        {
+          "id": "1233413",
+          "title": "Sinners",
+          "media_type": "movie"
+        }
+      ],
+      "watchedList": [
+        {
+          "id": "257094",
+          "title": "Holland",
+          "media_type": "movie"
+        },
+        {
+          "id": "1045938",
+          "title": "G20",
+          "media_type": "movie"
+        },
+        {
+          "id": "1233413",
+          "title": "Sinners",
+          "media_type": "movie"
+        },
+        {
+          "id": "1197306",
+          "title": "A Working Man",
+          "media_type": "movie"
+        }
+      ],
+      "following": [
+        "6868",
+        "68686",
+        "4zx9",
+        "c3d0q"
+      ],
+      "followers": [
+        "1z0"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "101",
+      "user": {
+        "name": "John Daniels",
+        "email": "jdaniels@gmail.com",
+        "image": "/uploads/users/1744785816206-263149504.png"
+      },
+      "movieId": 950387,
+      "movieMediaType": "movie",
+      "text": "Amazing!",
+      "createdAt": "2025-01-08T14:45:00.000Z",
+      "updatedAt": "2025-04-17T00:45:21.104Z",
+      "rating": "3.8",
+      "flagged": true,
+      "replies": [
+        {
+          "replyId": "replyXsghtyd123",
+          "replyText": "Spot on!",
+          "replyUser": {
+            "name": "Bob White",
+            "email": "bobwhite@gmail.com",
+            "image": "/uploads/users/1744785816206-263149504.png"
+          },
+          "replyDate": "2025-03-08T14:45:00.000Z",
+          "flagged": false,
+          "updatedAt": "2025-04-17T00:45:13.036Z"
+        },
+        {
+          "replyId": "replyXsghtyd1231",
+          "replyText": "Spot on!",
+          "replyUser": {
+            "name": "Jane Smith",
+            "email": "janesmith@gmail.com",
+            "image": "/uploads/users/1744785816206-263149504.png"
+          },
+          "replyDate": "2025-03-09T14:45:00.000Z",
+          "flagged": true,
+          "updatedAt": "2025-04-17T00:45:08.305Z"
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "user": {
+        "name": "Amy Garfield",
+        "email": "amyg@gmail.com",
+        "image": "/uploads/users/1744785816206-263149504.png"
+      },
+      "movieId": 950387,
+      "movieMediaType": "movie",
+      "text": "Amazingly excellent!",
+      "createdAt": "2025-01-09T14:45:00.000Z",
+      "updatedAt": "2025-02-12T14:45:00.000Z",
+      "rating": "4.5",
+      "replies": []
+    },
+    {
+      "id": "35a9",
+      "movieId": "950387",
+      "movieMediaType": "movie",
+      "text": "Enjoyed every bit of this!",
+      "user": {
+        "id": "6868",
+        "name": "Mac Zuck",
+        "email": "db@example.com",
+        "image": "/uploads/users/1744785816206-263149504.png"
+      },
+      "rating": 4.5,
+      "replies": [],
+      "createdAt": "2025-03-17T00:19:31.723Z",
+      "updatedAt": "2025-03-17T00:19:31.723Z"
+    },
+    {
+      "id": "5d05",
+      "movieId": "950387",
+      "movieMediaType": "movie",
+      "text": "Great movie!",
+      "user": {
+        "id": "75ab",
+        "name": "Dany",
+        "email": "dany@gmail.com",
+        "image": "/uploads/users/1744785816206-263149504.png"
+      },
+      "rating": 5,
+      "replies": [],
+      "createdAt": "2025-03-20T00:52:51.122Z",
+      "updatedAt": "2025-03-20T00:52:51.122Z"
+    },
+    {
+      "id": "d555",
+      "text": "I absolutely loved this! Definitely rewatching soon.",
+      "user": {
+        "name": "John Daniels",
+        "email": "jdaniels@gmail.com",
+        "image": "/uploads/users/1744785816206-263149504.png"
+      },
+      "movieId": "822119",
+      "movieMediaType": "movie",
+      "rating": 5,
+      "replies": [],
+      "createdAt": "2025-04-15T16:13:17.916Z",
+      "updatedAt": "2025-04-15T19:01:58.319Z",
+      "flagged": false
+    },
+    {
+      "id": "b201",
+      "text": "Who made this!😂😂😂",
+      "user": {
+        "name": "John Daniels",
+        "email": "jdaniels@gmail.com",
+        "image": "/uploads/users/1744785816206-263149504.png"
+      },
+      "movieId": "1195506",
+      "movieMediaType": "movie",
+      "rating": 4,
+      "replies": [],
+      "createdAt": "2025-04-15T19:21:39.472Z",
+      "updatedAt": "2025-04-15T19:21:39.472Z"
+    },
+    {
+      "id": "1744841261177",
+      "text": "Awesome movie!!!",
+      "rating": 0,
+      "createdAt": "2025-04-16T22:07:41.145Z",
+      "updatedAt": "2025-04-16T22:07:41.145Z"
+    },
+    {
+      "id": "1744843359819",
+      "text": "Awesome movie!!!",
+      "user": {
+        "name": "Mike Ann",
+        "email": "mikeann@gmail.com",
+        "image": null
+      },
+      "movieId": "950387",
+      "movieMediaType": "movie",
+      "rating": 5,
+      "replies": [],
+      "createdAt": "2025-04-16T22:42:39.809Z",
+      "updatedAt": "2025-04-16T22:45:59.674Z"
+    }
+  ],
+  "archived-users": [
+    {
+      "0": {
+        "id": "0f2f",
+        "email": "mikey@gmail.com",
+        "name": "Mike Son",
+        "password": "zxcvbnM123..",
+        "moviePreferences": [
+          16,
+          28
+        ]
+      },
+      "id": "3343"
+    },
+    {
+      "0": {
+        "0": {
+          "id": "0f2f",
+          "email": "mikey@gmail.com",
+          "name": "Mike Son",
+          "password": "zxcvbnM123..",
+          "moviePreferences": [
+            16,
+            28
+          ]
+        },
+        "id": "3343"
+      },
+      "1": {
+        "id": "2",
+        "name": "Jane Smith",
+        "image": "/uploads/users/1744785816206-263149504.png",
+        "email": "janesmith@gmail.com",
+        "watchList": [
+          {
+            "id": 285,
+            "title": "The Godfather",
+            "media_type": "movie"
+          }
+        ],
+        "watchedList": [
+          {
+            "id": 5508,
+            "title": "The Shawshank Redemption",
+            "media_type": "movie"
+          },
+          {
+            "id": 110,
+            "title": "Pulp Fiction",
+            "media_type": "movie"
+          }
+        ],
+        "following": [
+          1
+        ],
+        "followers": [
+          "75ab"
+        ]
+      },
+      "id": "5ca8"
+    },
+    {
+      "id": "1745186202972",
+      "firstName": "Dummy",
+      "lastName": "Account",
+      "email": "dummy@account.com",
+      "password": "dummydummy",
+      "dateOfBirth": "2017-02-09T05:00:00.000Z",
+      "bio": "Dummy!",
+      "moviePreferences": [
+        "comedy"
+      ]
+    },
+    {
+      "id": "3",
+      "firstName": "Darh",
+      "lastName": "Botch",
+      "email": "dbotch@hotmail.co",
+      "password": "$2b$10$cjt40uumLbfn23dqk8.mSuthTgO5iVkzb7PHw9D62rpbGYrY3IgYW",
+      "moviePreferences": [
+        12,
+        16,
+        80,
+        99
+      ],
+      "suspended": null,
+      "privilege": null
+    }
+  ],
+  "movie-requests": [
+    {
+      "id": "0f48",
+      "movieTitle": "Beauty in Black",
+      "mediaType": "tv",
+      "year": "2025",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-13T23:41:41.250Z",
+      "updatedAt": "2025-03-15T08:22:02.304Z",
+      "tmdb_id": 246246
+    },
+    {
+      "id": "0593",
+      "movieTitle": "Men in Black",
+      "mediaType": "movie",
+      "year": "2016",
+      "status": "declined",
+      "senderId": "75ab",
+      "createdAt": "2025-03-13T23:43:52.603Z",
+      "updatedAt": "2025-03-15T08:28:29.390Z",
+      "tmdb_id": 607
+    },
+    {
+      "id": "0594",
+      "movieTitle": "Hercules",
+      "mediaType": "movie",
+      "year": "2014",
+      "status": "declined",
+      "senderId": "75ab",
+      "createdAt": "2025-03-13T23:43:52.603Z",
+      "updatedAt": "2025-03-20T01:00:27.681Z",
+      "tmdb_id": 607
+    },
+    {
+      "id": "0595",
+      "movieTitle": "The Blacklist",
+      "mediaType": "tv",
+      "year": "2016",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-13T23:43:52.603Z",
+      "updatedAt": "2025-03-20T01:00:31.902Z",
+      "tmdb_id": 46952
+    },
+    {
+      "id": "0596",
+      "movieTitle": "Equalizer I",
+      "mediaType": "movie",
+      "year": "2016",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-13T23:43:52.603Z",
+      "updatedAt": "2025-04-19T02:53:08.623Z",
+      "tmdb_id": "345887"
+    },
+    {
+      "id": "0597",
+      "movieTitle": "High School Musical",
+      "mediaType": "movie",
+      "year": "2008",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-13T23:43:52.603Z",
+      "updatedAt": "2025-04-19T22:03:25.131Z",
+      "tmdb_id": "10947"
+    },
+    {
+      "id": "1023",
+      "movieTitle": "The Dark Knight",
+      "mediaType": "movie",
+      "year": "2008",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-12T12:14:30.502Z",
+      "updatedAt": "2025-03-15T09:01:15.210Z"
+    },
+    {
+      "id": "3051",
+      "movieTitle": "Inception",
+      "mediaType": "movie",
+      "year": "2010",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-11T16:29:20.100Z",
+      "updatedAt": "2025-04-19T22:27:24.248Z",
+      "tmdb_id": "27205"
+    },
+    {
+      "id": "4876",
+      "movieTitle": "Frozen",
+      "mediaType": "movie",
+      "year": "2013",
+      "status": "declined",
+      "senderId": "75ab",
+      "createdAt": "2025-03-10T09:30:15.760Z",
+      "updatedAt": "2025-03-12T07:15:55.210Z"
+    },
+    {
+      "id": "5983",
+      "movieTitle": "Titanic",
+      "mediaType": "movie",
+      "year": "1997",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-14T11:45:32.900Z",
+      "updatedAt": "2025-03-16T13:50:45.650Z"
+    },
+    {
+      "id": "6104",
+      "movieTitle": "Interstellar",
+      "mediaType": "movie",
+      "year": "2014",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-09T21:10:44.123Z",
+      "updatedAt": "2025-04-20T22:47:36.418Z",
+      "tmdb_id": "157336"
+    },
+    {
+      "id": "7459",
+      "movieTitle": "The Avengers",
+      "mediaType": "movie",
+      "year": "2012",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-08T19:50:11.800Z",
+      "updatedAt": "2025-03-14T16:40:20.900Z"
+    },
+    {
+      "id": "8273",
+      "movieTitle": "Jumanji: Welcome to the Jungle",
+      "mediaType": "movie",
+      "year": "2017",
+      "status": "declined",
+      "senderId": "75ab",
+      "createdAt": "2025-03-07T14:22:35.509Z",
+      "updatedAt": "2025-03-09T08:45:50.112Z"
+    },
+    {
+      "id": "9345",
+      "movieTitle": "The Lion King",
+      "mediaType": "movie",
+      "year": "1994",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-06T12:35:42.600Z",
+      "updatedAt": "2025-03-08T07:30:50.340Z"
+    },
+    {
+      "id": "1056",
+      "movieTitle": "Avatar",
+      "mediaType": "movie",
+      "year": "2009",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-05T18:50:33.708Z",
+      "updatedAt": "2025-04-20T22:47:39.746Z",
+      "tmdb_id": "19995"
+    },
+    {
+      "id": "1132",
+      "movieTitle": "Spider-Man: No Way Home",
+      "mediaType": "movie",
+      "year": "2021",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-04T17:22:18.405Z",
+      "updatedAt": "2025-03-06T09:41:55.310Z"
+    },
+    {
+      "id": "1243",
+      "movieTitle": "Shrek",
+      "mediaType": "movie",
+      "year": "2001",
+      "status": "declined",
+      "senderId": "75ab",
+      "createdAt": "2025-03-03T09:55:40.880Z",
+      "updatedAt": "2025-03-05T13:12:37.400Z"
+    },
+    {
+      "id": "1368",
+      "movieTitle": "Black Panther",
+      "mediaType": "movie",
+      "year": "2018",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-02T16:14:28.700Z",
+      "updatedAt": "2025-04-20T22:46:07.354Z",
+      "tmdb_id": "284054"
+    },
+    {
+      "id": "1482",
+      "movieTitle": "Coco",
+      "mediaType": "movie",
+      "year": "2017",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-03-01T08:30:14.620Z",
+      "updatedAt": "2025-03-03T18:21:43.902Z"
+    },
+    {
+      "id": "1599",
+      "movieTitle": "Finding Nemo",
+      "mediaType": "movie",
+      "year": "2003",
+      "status": "declined",
+      "senderId": "75ab",
+      "createdAt": "2025-02-28T14:40:30.980Z",
+      "updatedAt": "2025-03-02T07:29:11.007Z"
+    },
+    {
+      "id": "1623",
+      "movieTitle": "The Matrix",
+      "mediaType": "movie",
+      "year": "1999",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-02-27T19:22:11.860Z",
+      "updatedAt": "2025-03-01T13:15:29.650Z"
+    },
+    {
+      "id": "1784",
+      "movieTitle": "The Incredibles",
+      "mediaType": "movie",
+      "year": "2004",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-02-26T21:50:40.400Z",
+      "updatedAt": "2025-04-20T22:47:11.696Z",
+      "tmdb_id": "9806"
+    },
+    {
+      "id": "1897",
+      "movieTitle": "Toy Story",
+      "mediaType": "movie",
+      "year": "1995",
+      "status": "approved",
+      "senderId": "75ab",
+      "createdAt": "2025-02-25T10:15:30.230Z",
+      "updatedAt": "2025-02-27T14:40:20.800Z"
+    },
+    {
+      "id": "1956",
+      "movieTitle": "Deadpool",
+      "mediaType": "movie",
+      "year": "2016",
+      "status": "declined",
+      "senderId": "75ab",
+      "createdAt": "2025-02-24T08:50:40.700Z",
+      "updatedAt": "2025-02-26T19:32:11.506Z"
+    },
+    {
+      "id": "636c",
+      "movieTitle": "The One",
+      "mediaType": "movie",
+      "year": "2005",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T00:18:08.320Z",
+      "updatedAt": "2025-04-20T22:47:07.988Z",
+      "tmdb_id": "10796"
+    },
+    {
+      "id": "fb07",
+      "movieTitle": "Equaziler 3",
+      "mediaType": "movie",
+      "year": "2024",
+      "senderId": "6868",
+      "status": "pending",
+      "createdAt": "2025-03-17T00:18:27.056Z",
+      "updatedAt": "2025-03-17T00:18:27.056Z"
+    },
+    {
+      "id": "34ee",
+      "movieTitle": "The One",
+      "mediaType": "movie",
+      "year": "2005",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:08:44.006Z",
+      "updatedAt": "2025-04-20T22:46:35.701Z",
+      "tmdb_id": "10796"
+    },
+    {
+      "id": "4837",
+      "movieTitle": "The One",
+      "mediaType": "movie",
+      "year": "2005",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:09:26.905Z",
+      "updatedAt": "2025-04-20T22:46:34.436Z",
+      "tmdb_id": "10796"
+    },
+    {
+      "id": "a6a5",
+      "movieTitle": "The One",
+      "mediaType": "movie",
+      "year": "2005",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:10:29.056Z",
+      "updatedAt": "2025-04-20T22:46:33.546Z",
+      "tmdb_id": "10796"
+    },
+    {
+      "id": "1dac",
+      "movieTitle": "The One",
+      "mediaType": "movie",
+      "year": "2005",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:11:08.808Z",
+      "updatedAt": "2025-04-20T22:46:32.750Z",
+      "tmdb_id": "10796"
+    },
+    {
+      "id": "4c7a",
+      "movieTitle": "The Blacklist",
+      "mediaType": "tv",
+      "year": "2016",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:12:38.553Z",
+      "updatedAt": "2025-04-19T20:54:27.337Z",
+      "tmdb_id": "46952"
+    },
+    {
+      "id": "51df",
+      "movieTitle": "The Blacklist",
+      "mediaType": "movie",
+      "year": "2016",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:14:43.357Z",
+      "updatedAt": "2025-04-19T20:55:06.974Z",
+      "tmdb_id": "8876"
+    },
+    {
+      "id": "431d",
+      "movieTitle": "The One",
+      "mediaType": "movie",
+      "year": "2005",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:15:28.277Z",
+      "updatedAt": "2025-04-19T20:55:12.559Z",
+      "tmdb_id": "10796"
+    },
+    {
+      "id": "33e5",
+      "movieTitle": "The One",
+      "mediaType": "movie",
+      "year": "2005",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:16:59.342Z",
+      "updatedAt": "2025-04-19T20:55:22.168Z",
+      "tmdb_id": "10796"
+    },
+    {
+      "id": "c00d",
+      "movieTitle": "The Blacklist",
+      "mediaType": "tv",
+      "year": "2016",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:17:53.225Z",
+      "updatedAt": "2025-04-20T22:46:22.614Z",
+      "tmdb_id": "46952"
+    },
+    {
+      "id": "b9ad",
+      "movieTitle": "The Blacklist",
+      "mediaType": "tv",
+      "year": "2016",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:19:26.713Z",
+      "updatedAt": "2025-04-20T22:46:23.552Z",
+      "tmdb_id": "46952"
+    },
+    {
+      "id": "25b2",
+      "movieTitle": "The Blacklist",
+      "mediaType": "tv",
+      "year": "2016",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:20:04.394Z",
+      "updatedAt": "2025-04-20T22:46:24.685Z",
+      "tmdb_id": "46952"
+    },
+    {
+      "id": "d62b",
+      "movieTitle": "The Blacklist",
+      "mediaType": "tv",
+      "year": "2016",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:20:33.495Z",
+      "updatedAt": "2025-04-20T22:46:26.426Z",
+      "tmdb_id": "46952"
+    },
+    {
+      "id": "2e91",
+      "movieTitle": "The Blacklist",
+      "mediaType": "tv",
+      "year": "2016",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:21:53.696Z",
+      "updatedAt": "2025-04-19T21:03:31.315Z",
+      "tmdb_id": "8876"
+    },
+    {
+      "id": "a80c",
+      "movieTitle": "The One",
+      "mediaType": "movie",
+      "year": "2005",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:22:10.149Z",
+      "updatedAt": "2025-04-20T22:46:28.631Z",
+      "tmdb_id": "10796"
+    },
+    {
+      "id": "679e",
+      "movieTitle": "Equalizer 3",
+      "mediaType": "movie",
+      "year": "2024",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:23:36.239Z",
+      "updatedAt": "2025-04-20T22:47:19.379Z",
+      "tmdb_id": "926393"
+    },
+    {
+      "id": "92d6",
+      "movieTitle": "The Lion King 2",
+      "mediaType": "movie",
+      "year": "2024",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:27:41.706Z",
+      "updatedAt": "2025-04-20T22:47:22.303Z",
+      "tmdb_id": "762509"
+    },
+    {
+      "id": "365e",
+      "movieTitle": "Drunken Master",
+      "mediaType": "movie",
+      "year": "2003",
+      "senderId": "6868",
+      "status": "approved",
+      "createdAt": "2025-03-17T01:29:32.026Z",
+      "updatedAt": "2025-04-19T22:22:46.125Z",
+      "tmdb_id": "11230"
+    },
+    {
+      "id": "cace",
+      "movieTitle": "The Blacklist",
+      "mediaType": "tv",
+      "year": "2016",
+      "senderId": "75ab",
+      "status": "approved",
+      "createdAt": "2025-03-20T01:08:59.251Z",
+      "updatedAt": "2025-03-20T01:11:33.575Z",
+      "tmdb_id": 46952
+    },
+    {
+      "id": "1745100940557",
+      "movieTitle": "G20",
+      "mediaType": "movie",
+      "year": "2025",
+      "senderId": "75ab",
+      "status": "approved",
+      "createdAt": "2025-04-19T22:15:40.552Z",
+      "updatedAt": "2025-04-19T22:16:36.225Z",
+      "tmdb_id": "1045938"
+    },
+    {
+      "id": "1745101182107",
+      "movieTitle": "Novocaine",
+      "mediaType": "movie",
+      "year": "2025",
+      "senderId": "75ab",
+      "status": "approved",
+      "createdAt": "2025-04-19T22:19:42.102Z",
+      "updatedAt": "2025-04-19T22:20:27.110Z",
+      "tmdb_id": "1195506"
+    },
+    {
+      "id": "1745190603585",
+      "movieTitle": "afsdfs",
+      "mediaType": "movie",
+      "year": "1900",
+      "senderId": "e6ec",
+      "status": "pending",
+      "createdAt": "2025-04-20T23:10:03.576Z",
+      "updatedAt": "2025-04-20T23:10:03.576Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "7d30",
+      "date": "2025-03-14T03:56:24.419Z",
+      "from": "75ab",
+      "to": "4",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "3981",
+      "date": "2025-03-14T03:56:31.153Z",
+      "from": "75ab",
+      "to": "12",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "5df1",
+      "date": "2025-03-14T03:58:49.987Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "b978",
+      "date": "2025-03-14T04:03:17.622Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "9e5f",
+      "date": "2025-03-14T04:06:34.642Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "da35",
+      "date": "2025-03-14T04:06:36.891Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "9dfe",
+      "date": "2025-03-14T04:06:38.410Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "db78",
+      "date": "2025-03-14T04:06:40.559Z",
+      "from": "75ab",
+      "to": "2",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "7078",
+      "date": "2025-03-14T04:06:42.926Z",
+      "from": "75ab",
+      "to": "12",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "8995",
+      "date": "2025-03-14T04:06:44.892Z",
+      "from": "75ab",
+      "to": "12",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "7595",
+      "date": "2025-03-14T04:06:46.207Z",
+      "from": "75ab",
+      "to": "2",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "e83d",
+      "date": "2025-03-14T04:06:47.693Z",
+      "from": "75ab",
+      "to": "4",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "d35b",
+      "date": "2025-03-14T04:15:08.347Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "9e5fy",
+      "date": "2025-03-14T04:15:11.084Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "ae92",
+      "date": "2025-03-14T04:18:29.938Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "bf86",
+      "date": "2025-03-14T04:18:59.254Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "decd",
+      "date": "2025-03-14T04:20:08.372Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "4278",
+      "date": "2025-03-14T04:20:43.750Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "138a",
+      "date": "2025-03-14T04:21:20.885Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "522d",
+      "date": "2025-03-14T04:23:01.637Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "e89e",
+      "date": "2025-03-14T04:32:45.962Z",
+      "from": "75ab",
+      "to": "4",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "dfd5",
+      "date": "2025-03-14T04:32:48.342Z",
+      "from": "75ab",
+      "to": "12",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "b530",
+      "date": "2025-03-14T04:32:49.894Z",
+      "from": "75ab",
+      "to": "2",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "b0b0",
+      "date": "2025-03-14T04:32:55.345Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany unfollowed you!",
+      "read": true
+    },
+    {
+      "id": "234d",
+      "date": "2025-03-14T04:32:57.227Z",
+      "from": "75ab",
+      "to": "2",
+      "message": "Dany unfollowed you!",
+      "read": false
+    },
+    {
+      "id": "c02d",
+      "date": "2025-03-14T04:33:13.062Z",
+      "from": "75ab",
+      "to": "12",
+      "message": "Dany unfollowed you!",
+      "read": false
+    },
+    {
+      "id": "9204",
+      "date": "2025-03-14T04:33:14.193Z",
+      "from": "75ab",
+      "to": "4",
+      "message": "Dany unfollowed you!",
+      "read": false
+    },
+    {
+      "id": "73d2",
+      "date": "2025-03-14T04:33:17.759Z",
+      "from": "75ab",
+      "to": "12",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "3865",
+      "date": "2025-03-14T04:33:27.544Z",
+      "from": "75ab",
+      "to": "4",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "9202",
+      "date": "2025-03-14T14:18:55.330Z",
+      "from": "75ab",
+      "to": "12",
+      "message": "Dany unfollowed you!",
+      "read": false
+    },
+    {
+      "id": "bed9",
+      "date": "2025-03-14T14:22:15.207Z",
+      "from": "75ab",
+      "to": "4",
+      "message": "Dany unfollowed you!",
+      "read": false
+    },
+    {
+      "id": "41f1",
+      "date": "2025-03-14T14:24:28.988Z",
+      "from": "75ab",
+      "to": "12",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "6a59",
+      "date": "2025-03-14T15:06:43.716Z",
+      "from": "75ab",
+      "to": "12",
+      "message": "Dany unfollowed you!",
+      "read": false
+    },
+    {
+      "id": "be5c",
+      "date": "2025-03-14T15:29:12.895Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "6fe3",
+      "date": "2025-03-14T15:56:36.891Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany unfollowed you!",
+      "read": true
+    },
+    {
+      "id": "a3bf",
+      "date": "2025-03-16T02:40:13.430Z",
+      "from": "75ab",
+      "to": "1",
+      "message": "Dany followed you!",
+      "read": true
+    },
+    {
+      "id": "575e",
+      "date": "2025-03-16T02:40:20.747Z",
+      "from": "75ab",
+      "to": "2",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "f29c",
+      "date": "2025-03-16T02:41:05.180Z",
+      "from": "75ab",
+      "to": "76854",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "a1ec",
+      "date": "2025-03-16T02:41:19.980Z",
+      "from": "75ab",
+      "to": "76854",
+      "message": "Dany unfollowed you!",
+      "read": false
+    },
+    {
+      "id": "5cfc",
+      "date": "2025-03-17T01:21:53.716Z",
+      "from": "6868",
+      "to": "Admin1",
+      "message": "Mac Zuck requested for a movie!",
+      "read": true
+    },
+    {
+      "id": "5b7e",
+      "date": "2025-03-17T01:22:10.163Z",
+      "from": "6868",
+      "to": "Admin1",
+      "message": "Mac Zuck requested for a movie!",
+      "read": true
+    },
+    {
+      "id": "f433",
+      "date": "2025-03-17T01:23:36.254Z",
+      "from": "6868",
+      "to": "Admin1",
+      "message": "Mac Zuck requested for a movie!",
+      "read": true
+    },
+    {
+      "id": "0d93",
+      "date": "2025-03-17T01:27:41.725Z",
+      "from": "6868",
+      "to": "Admin1",
+      "message": "Mac Zuck requested for a movie!",
+      "read": true
+    },
+    {
+      "id": "36a6",
+      "date": "2025-03-17T01:29:32.036Z",
+      "from": "6868",
+      "to": "Admin1",
+      "message": "Mac Zuck requested for a movie!",
+      "read": true
+    },
+    {
+      "id": "f475",
+      "date": "2025-03-20T00:52:13.722Z",
+      "from": "75ab",
+      "to": "68686",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "fa30",
+      "date": "2025-03-20T00:52:17.422Z",
+      "from": "75ab",
+      "to": "98686",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "3d77",
+      "date": "2025-03-20T01:08:59.263Z",
+      "from": "75ab",
+      "to": "Admin1",
+      "message": "Dany requested for a movie!",
+      "read": true
+    },
+    {
+      "id": "5b9a",
+      "date": "2025-03-22T18:45:55.746Z",
+      "from": "75ab",
+      "to": "2",
+      "message": "Dany unfollowed you!",
+      "read": false
+    },
+    {
+      "id": "4d93",
+      "date": "2025-03-22T18:46:02.603Z",
+      "from": "75ab",
+      "to": "2",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "e08a",
+      "date": "2025-03-22T18:46:08.019Z",
+      "from": "75ab",
+      "to": "686860",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "c4e5",
+      "date": "2025-03-29T20:44:10.027Z",
+      "from": "75ab",
+      "to": "890686",
+      "message": "Dany followed you!",
+      "read": false
+    },
+    {
+      "id": "fe23",
+      "to": "e6ec",
+      "from": "1z0",
+      "message": "John Daniels unfollowed you!",
+      "read": true,
+      "date": "2025-04-15T17:05:49.282Z"
+    },
+    {
+      "id": "92fe",
+      "to": "e6ec",
+      "from": "1z0",
+      "message": "John Daniels unfollowed you!",
+      "read": true,
+      "date": "2025-04-15T17:06:07.382Z"
+    },
+    {
+      "id": "667e",
+      "to": "e6ec",
+      "from": "1z0",
+      "message": "John Daniels unfollowed you!",
+      "read": true,
+      "date": "2025-04-15T17:13:11.288Z"
+    },
+    {
+      "id": "f0eb",
+      "to": "e6ec",
+      "from": "1z0",
+      "message": "John Daniels unfollowed you!",
+      "read": true,
+      "date": "2025-04-15T17:16:53.025Z"
+    },
+    {
+      "id": "ce4a",
+      "to": "e6ec",
+      "from": "1z0",
+      "message": "John Daniels unfollowed you!",
+      "read": true,
+      "date": "2025-04-15T17:18:57.494Z"
+    },
+    {
+      "id": "f178",
+      "to": "e6ec",
+      "from": "1z0",
+      "message": "John Daniels followed you!",
+      "read": true,
+      "date": "2025-04-15T17:43:21.847Z"
+    },
+    {
+      "id": "f490",
+      "to": "e6ec",
+      "from": "1z0",
+      "message": "John Daniels unfollowed you!",
+      "read": true,
+      "date": "2025-04-15T17:59:56.926Z"
+    },
+    {
+      "id": "1abb",
+      "to": "e6ec",
+      "from": "1z0",
+      "message": "John Daniels followed you!",
+      "read": false,
+      "date": "2025-04-15T18:04:14.862Z"
+    },
+    {
+      "id": "1745100205157",
+      "date": "2025-04-19T22:03:25.154Z",
+      "from": "Admin1",
+      "to": "75ab",
+      "message": "Your request for High School Musical was approved. You can now view it on Streambase.",
+      "read": true
+    },
+    {
+      "id": "1745100940565",
+      "date": "2025-04-19T22:15:40.561Z",
+      "from": "75ab",
+      "to": "Admin1",
+      "message": "Dany Mason requested for a movie!",
+      "read": true
+    },
+    {
+      "id": "1745100996269",
+      "date": "2025-04-19T22:16:36.266Z",
+      "from": "Admin1",
+      "to": "75ab",
+      "message": "Your request for G20 was approved. You can now view it on Streambase.",
+      "read": true
+    },
+    {
+      "id": "1745101182116",
+      "date": "2025-04-19T22:19:42.112Z",
+      "from": "75ab",
+      "to": "Admin1",
+      "message": "Dany Mason requested for a movie!",
+      "read": true
+    },
+    {
+      "id": "1745101227134",
+      "date": "2025-04-19T22:20:27.124Z",
+      "from": "Admin1",
+      "to": "75ab",
+      "message": "Your request for Novocaine was approved. You can now view it on Streambase.",
+      "read": true
+    },
+    {
+      "id": "1745101366159",
+      "date": "2025-04-19T22:22:46.156Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for Drunken Master was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745101644279",
+      "date": "2025-04-19T22:27:24.275Z",
+      "from": "Admin1",
+      "to": "75ab",
+      "message": "Your request for Inception was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745179624977",
+      "to": "4zx9",
+      "from": "e6ec",
+      "message": "Mike Ann unfollowed you!",
+      "read": false,
+      "date": "2025-04-20T20:07:04.973Z"
+    },
+    {
+      "id": "1745179630964",
+      "to": "68686",
+      "from": "e6ec",
+      "message": "Mike Ann unfollowed you!",
+      "read": false,
+      "date": "2025-04-20T20:07:10.960Z"
+    },
+    {
+      "id": "1745179641722",
+      "to": "2",
+      "from": "e6ec",
+      "message": "Mike Ann followed you!",
+      "read": false,
+      "date": "2025-04-20T20:07:21.715Z"
+    },
+    {
+      "id": "1745189167381",
+      "date": "2025-04-20T22:46:07.378Z",
+      "from": "Admin1",
+      "to": "75ab",
+      "message": "Your request for Black Panther was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189182647",
+      "date": "2025-04-20T22:46:22.643Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The Blacklist was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189183578",
+      "date": "2025-04-20T22:46:23.575Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The Blacklist was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189184711",
+      "date": "2025-04-20T22:46:24.709Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The Blacklist was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189186456",
+      "date": "2025-04-20T22:46:26.453Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The Blacklist was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189188663",
+      "date": "2025-04-20T22:46:28.660Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The One was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189192777",
+      "date": "2025-04-20T22:46:32.774Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The One was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189193571",
+      "date": "2025-04-20T22:46:33.567Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The One was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189194463",
+      "date": "2025-04-20T22:46:34.459Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The One was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189195729",
+      "date": "2025-04-20T22:46:35.726Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The One was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189197711",
+      "date": "2025-04-20T22:46:37.708Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Sorry! The movie \"Equaziler 3\" was not found. Please check the title and year, and try again.",
+      "read": false
+    },
+    {
+      "id": "1745189228017",
+      "date": "2025-04-20T22:47:08.014Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The One was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189231749",
+      "date": "2025-04-20T22:47:11.746Z",
+      "from": "Admin1",
+      "to": "75ab",
+      "message": "Your request for The Incredibles was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189239409",
+      "date": "2025-04-20T22:47:19.404Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for Equalizer 3 was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189242350",
+      "date": "2025-04-20T22:47:22.346Z",
+      "from": "Admin1",
+      "to": "6868",
+      "message": "Your request for The Lion King 2 was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189256450",
+      "date": "2025-04-20T22:47:36.446Z",
+      "from": "Admin1",
+      "to": "75ab",
+      "message": "Your request for Interstellar was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745189259783",
+      "date": "2025-04-20T22:47:39.780Z",
+      "from": "Admin1",
+      "to": "75ab",
+      "message": "Your request for Avatar was approved. You can now view it on Streambase.",
+      "read": false
+    },
+    {
+      "id": "1745190603592",
+      "date": "2025-04-20T23:10:03.589Z",
+      "from": "e6ec",
+      "to": "Admin1",
+      "message": "Mike Ann requested for a movie!",
+      "read": false
+    },
+    {
+      "id": "1745190646124",
+      "date": "2025-04-20T23:10:46.117Z",
+      "from": "Admin1",
+      "to": "e6ec",
+      "message": "Sorry! The movie \"afsdfs\" was not found. Please check the title and year, and try again.",
+      "read": false
+    }
+  ],
+  "uploads": [
+    {
+      "id": "1744785816211",
+      "originalName": "vibrent_7.png",
+      "filename": "1744785816206-263149504.png",
+      "path": "/uploads/users/1744785816206-263149504.png",
+      "size": 3567,
+      "mimetype": "image/png",
+      "createdAt": "2025-04-16T06:43:36.211Z"
+    }
+  ],
+  "movies": [
+    {
+      "id": "1233575",
+      "title": "Black Bag",
+      "media_type": "movie",
+      "poster": "/hHPovtU4b96LHcoeEwRkGHI5btw.jpg",
+      "backdrop": "/gxO51FVgADhYGGnnRPIlutVqb30.jpg",
+      "released": "2025-03-12",
+      "createdAt": "2025-04-03T02:16:42.071Z",
+      "updatedAt": "2025-04-03T02:16:42.071Z"
+    },
+    {
+      "id": "257094",
+      "title": "Holland",
+      "media_type": "movie",
+      "poster": "/k4DgNfKC52uGVTgFncRsXx9Eahd.jpg",
+      "backdrop": "/3xN4vNPWBSVDsiiOzL5sB95Sa1J.jpg",
+      "released": "2025-03-27",
+      "createdAt": "2025-04-03T02:16:42.072Z",
+      "updatedAt": "2025-04-03T02:16:42.072Z"
+    },
+    {
+      "id": "1197306",
+      "title": "A Working Man",
+      "media_type": "movie",
+      "poster": "/bkbmInoAnEaMH4oxpXAXWwKr8Kd.jpg",
+      "backdrop": "/xBrx6O1RIhjtWmVthZIANuQz7Z2.jpg",
+      "released": "2025-03-26",
+      "createdAt": "2025-04-03T02:16:42.072Z",
+      "updatedAt": "2025-04-03T02:16:42.072Z"
+    },
+    {
+      "id": "447273",
+      "title": "Snow White",
+      "media_type": "movie",
+      "poster": "/xWWg47tTfparvjK0WJNX4xL8lW2.jpg",
+      "backdrop": "/9KbUro9uJHUt5xyorQtjWmGfJDE.jpg",
+      "released": "2025-03-19",
+      "createdAt": "2025-04-03T02:16:42.073Z",
+      "updatedAt": "2025-04-03T02:16:42.073Z"
+    },
+    {
+      "id": "696506",
+      "title": "Mickey 17",
+      "media_type": "movie",
+      "poster": "/edKpE9B5qN3e559OuMCLZdW1iBZ.jpg",
+      "backdrop": "/qUc0Hol3eP74dbW4YyqT6oRLYgT.jpg",
+      "released": "2025-02-28",
+      "createdAt": "2025-04-03T02:16:42.073Z",
+      "updatedAt": "2025-04-03T02:16:42.073Z"
+    },
+    {
+      "id": "950387",
+      "title": "A Minecraft Movie",
+      "media_type": "movie",
+      "poster": "/yFHHfHcUgGAxziP1C3lLt0q2T4s.jpg",
+      "backdrop": "/2Nti3gYAX513wvhp8IiLL6ZDyOm.jpg",
+      "released": "2025-03-31",
+      "createdAt": "2025-04-03T02:16:42.074Z",
+      "updatedAt": "2025-04-03T02:16:42.074Z"
+    },
+    {
+      "id": "762509",
+      "title": "Mufasa: The Lion King",
+      "media_type": "movie",
+      "poster": "/lurEK87kukWNaHd0zYnsi3yzJrs.jpg",
+      "backdrop": "/1w8kutrRucTd3wlYyu5QlUDMiG1.jpg",
+      "released": "2024-12-18",
+      "createdAt": "2025-04-03T02:16:42.074Z",
+      "updatedAt": "2025-04-03T02:16:42.074Z"
+    },
+    {
+      "id": "1124620",
+      "title": "The Monkey",
+      "media_type": "movie",
+      "poster": "/yYa8Onk9ow7ukcnfp2QWVvjWYel.jpg",
+      "backdrop": "/6dC7ULfiutxwEAs7LjWHL2Tc7Zv.jpg",
+      "released": "2025-02-14",
+      "createdAt": "2025-04-03T02:16:42.075Z",
+      "updatedAt": "2025-04-03T02:16:42.075Z"
+    },
+    {
+      "id": "1254786",
+      "title": "The Life List",
+      "media_type": "movie",
+      "poster": "/5fg98cVo7da7OIK45csdLSd4NaU.jpg",
+      "backdrop": "/sulUXRukzh7WSK34y8mnaUcHo3y.jpg",
+      "released": "2025-03-27",
+      "createdAt": "2025-04-03T02:16:42.075Z",
+      "updatedAt": "2025-04-03T02:16:42.075Z"
+    },
+    {
+      "id": "777443",
+      "title": "The Electric State",
+      "media_type": "movie",
+      "poster": "/1TZ9Er1xEAKizzKKqYVgJIhNkN2.jpg",
+      "backdrop": "/2n7lYEeIbucsEQCswRcVB6ZYmMP.jpg",
+      "released": "2025-03-07",
+      "createdAt": "2025-04-03T02:16:42.076Z",
+      "updatedAt": "2025-04-03T02:16:42.076Z"
+    },
+    {
+      "id": "774100",
+      "title": "Alexander and the Terrible, Horrible, No Good, Very Bad Road Trip",
+      "media_type": "movie",
+      "poster": "/srOAe7Xe2KN4QZDSoALmE9T8Hh6.jpg",
+      "backdrop": "/aJZ33UhVlInyFENbH4GK4s0k6E0.jpg",
+      "released": "2025-03-26",
+      "createdAt": "2025-04-03T02:16:42.075Z",
+      "updatedAt": "2025-04-03T02:16:42.075Z"
+    },
+    {
+      "id": "1084199",
+      "title": "Companion",
+      "media_type": "movie",
+      "poster": "/oCoTgC3UyWGfyQ9thE10ulWR7bn.jpg",
+      "backdrop": "/9p2tVEEWw1M92Pt63Vbq7EjBpvk.jpg",
+      "released": "2025-01-22",
+      "createdAt": "2025-04-03T02:16:42.076Z",
+      "updatedAt": "2025-04-03T02:16:42.076Z"
+    },
+    {
+      "id": "402431",
+      "title": "Wicked",
+      "media_type": "movie",
+      "poster": "/xDGbZ0JJ3mYaGKy4Nzd9Kph6M9L.jpg",
+      "backdrop": "/uKb22E0nlzr914bA9KyA5CVCOlV.jpg",
+      "released": "2024-11-20",
+      "createdAt": "2025-04-03T02:16:42.077Z",
+      "updatedAt": "2025-04-03T02:16:42.077Z"
+    },
+    {
+      "id": "822119",
+      "title": "Captain America: Brave New World",
+      "media_type": "movie",
+      "poster": "/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg",
+      "backdrop": "/8eifdha9GQeZAkexgtD45546XKx.jpg",
+      "released": "2025-02-12",
+      "createdAt": "2025-04-03T02:16:42.078Z",
+      "updatedAt": "2025-04-03T02:16:42.078Z"
+    },
+    {
+      "id": "1202479",
+      "title": "Opus",
+      "media_type": "movie",
+      "poster": "/eAslhx6gKKD6c1vVY6YV9DSG5lb.jpg",
+      "backdrop": "/qxmkuiuHiryfflC8ld91VNOfe0z.jpg",
+      "released": "2025-03-13",
+      "createdAt": "2025-04-03T02:16:42.078Z",
+      "updatedAt": "2025-04-03T02:16:42.078Z"
+    },
+    {
+      "id": "1195506",
+      "title": "Novocaine",
+      "media_type": "movie",
+      "poster": "/xmMHGz9dVRaMY6rRAlEX4W0Wdhm.jpg",
+      "backdrop": "/cP16wq0P6f4in8vg2eTlqLSnaAH.jpg",
+      "released": "2025-03-12",
+      "createdAt": "2025-04-03T02:16:42.079Z",
+      "updatedAt": "2025-04-03T02:16:42.079Z"
+    },
+    {
+      "id": "1265623",
+      "title": "Banger",
+      "media_type": "movie",
+      "poster": "/nTRzfbsUNFsUjlpVQ4FQAsbm9hu.jpg",
+      "backdrop": "/oDvBfDVgF6uthIPdRfC6zqqbvcE.jpg",
+      "released": "2025-04-01",
+      "createdAt": "2025-04-03T02:16:42.079Z",
+      "updatedAt": "2025-04-03T02:16:42.079Z"
+    },
+    {
+      "id": "1087192",
+      "title": "How to Train Your Dragon",
+      "media_type": "movie",
+      "poster": "/47HoQdGvW4Jy4ntUbsQ3bEnJHDh.jpg",
+      "backdrop": "/7HqLLVjdjhXS0Qoz1SgZofhkIpE.jpg",
+      "released": "2025-06-05",
+      "createdAt": "2025-04-03T02:16:42.080Z",
+      "updatedAt": "2025-04-03T02:16:42.080Z"
+    },
+    {
+      "id": "549509",
+      "title": "The Brutalist",
+      "media_type": "movie",
+      "poster": "/vP7Yd6couiAaw9jgMd5cjMRj3hQ.jpg",
+      "backdrop": "/hmZnqijPaaACjenDkrbWcCmcADI.jpg",
+      "released": "2024-12-20",
+      "createdAt": "2025-04-03T02:16:42.080Z",
+      "updatedAt": "2025-04-03T02:16:42.080Z"
+    },
+    {
+      "id": "1229730",
+      "title": "Carjackers",
+      "media_type": "movie",
+      "poster": "/1bhIezUxvLM9r66yIf1i6EDVJ6R.jpg",
+      "backdrop": "/is9bmV6uYXu7LjZGJczxrjJDlv8.jpg",
+      "released": "2025-03-27",
+      "createdAt": "2025-04-03T02:16:42.081Z",
+      "updatedAt": "2025-04-03T02:16:42.081Z"
+    },
+    {
+      "id": "274671",
+      "media_type": "tv",
+      "poster": "/az0jQSgRLezKw5uHaEjPH20NexD.jpg",
+      "backdrop": "/u42yAt7tZVMizlei8zF6mJUSx2Q.jpg",
+      "released": "2025-04-02",
+      "createdAt": "2025-04-03T02:16:42.147Z",
+      "updatedAt": "2025-04-03T02:16:42.147Z"
+    },
+    {
+      "id": "127532",
+      "media_type": "tv",
+      "poster": "/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg",
+      "backdrop": "/odVlTMqPPiMksmxpN9cCbPCjUPP.jpg",
+      "released": "2024-01-07",
+      "createdAt": "2025-04-03T02:16:42.148Z",
+      "updatedAt": "2025-04-03T02:16:42.148Z"
+    },
+    {
+      "id": "202555",
+      "media_type": "tv",
+      "poster": "/9lLuhV703HGCbnz6FxnqCwIwzAZ.jpg",
+      "backdrop": "/hrsRczdsAHBLTDzlIqt82bxY0Tt.jpg",
+      "released": "2025-03-04",
+      "createdAt": "2025-04-03T02:16:42.149Z",
+      "updatedAt": "2025-04-03T02:16:42.149Z"
+    },
+    {
+      "id": "276880",
+      "media_type": "tv",
+      "poster": "/qUgFbHmIEyFNX0rzL4UgJfHkqcS.jpg",
+      "backdrop": "/i3Cle3IZc7LUAu2ytgr9TqzD6Yi.jpg",
+      "released": "2025-04-02",
+      "createdAt": "2025-04-03T02:16:42.149Z",
+      "updatedAt": "2025-04-03T02:16:42.149Z"
+    },
+    {
+      "id": "274741",
+      "media_type": "tv",
+      "poster": "/lmNgUMQYXGMBKoPmv0YWfTjtV7x.jpg",
+      "backdrop": "/a1rFKV5sNWMhGPX00pCxMPQIxZK.jpg",
+      "released": "2025-04-10",
+      "createdAt": "2025-04-03T02:16:42.150Z",
+      "updatedAt": "2025-04-03T02:16:42.150Z"
+    },
+    {
+      "id": "249042",
+      "media_type": "tv",
+      "poster": "/tDHWWReefmOOjBCJZUck8cNwssk.jpg",
+      "backdrop": "/pCT3WLNrBBQeY7DRMw2CD1Pii05.jpg",
+      "released": "2025-03-13",
+      "createdAt": "2025-04-03T02:16:42.152Z",
+      "updatedAt": "2025-04-03T02:16:42.152Z"
+    },
+    {
+      "id": "345887",
+      "title": "The Equalizer 2",
+      "media_type": "movie",
+      "poster": "/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
+      "backdrop": "/z7noaCJ4KtmhwHw7QcNtnMMo4Qy.jpg",
+      "released": "2018-07-19",
+      "createdAt": "2025-04-19T02:53:08.623Z",
+      "updatedAt": "2025-04-19T02:53:08.623Z"
+    },
+    {
+      "id": "46952",
+      "media_type": "tv",
+      "poster": "/4HTfd1PhgFUenJxVuBDNdLmdr0c.jpg",
+      "backdrop": "/2eIlCirgcvEwmCSYh2wDfz5Sxvz.jpg",
+      "released": "2013-09-23",
+      "createdAt": "2025-04-19T20:54:27.337Z",
+      "updatedAt": "2025-04-19T20:54:27.337Z"
+    },
+    {
+      "id": "8876",
+      "title": "The Blacklist",
+      "media_type": "movie",
+      "poster": null,
+      "backdrop": null,
+      "released": "2004-12-27",
+      "createdAt": "2025-04-19T20:55:06.974Z",
+      "updatedAt": "2025-04-19T20:55:06.974Z"
+    },
+    {
+      "id": "10796",
+      "title": "The One",
+      "media_type": "movie",
+      "poster": "/gcr3t71KmeXINemMrhaGBGVJPwW.jpg",
+      "backdrop": "/yZzPTih3HQZUBghrWirt0Rk17uE.jpg",
+      "released": "2001-11-02",
+      "createdAt": "2025-04-19T20:55:12.559Z",
+      "updatedAt": "2025-04-19T20:55:12.559Z"
+    },
+    {
+      "id": "10947",
+      "title": "High School Musical",
+      "media_type": "movie",
+      "poster": "/bg1eLo2OjySRYKaTO89ZDsqUcJ4.jpg",
+      "backdrop": "/2p1nyBVSEBiCTrrZeVSV9nIsqHr.jpg",
+      "released": "2006-01-20",
+      "createdAt": "2025-04-19T21:55:03.352Z",
+      "updatedAt": "2025-04-19T21:55:03.352Z"
+    },
+    {
+      "id": "1045938",
+      "title": "G20",
+      "media_type": "movie",
+      "poster": "/wv6oWAleCJZUk5htrGg413t3GCy.jpg",
+      "backdrop": "/k32XKMjmXMGeydykD32jfER3BVI.jpg",
+      "released": "2025-04-09",
+      "createdAt": "2025-04-19T22:16:36.225Z",
+      "updatedAt": "2025-04-19T22:16:36.225Z"
+    },
+    {
+      "id": "11230",
+      "title": "Drunken Master",
+      "media_type": "movie",
+      "poster": "/cf43J2SH8tECZVl9N5n0Q6Ckche.jpg",
+      "backdrop": "/oxQJT3CCwxRRDgnPUZvT6xmts61.jpg",
+      "released": "1978-10-05",
+      "createdAt": "2025-04-19T22:22:46.125Z",
+      "updatedAt": "2025-04-19T22:22:46.125Z"
+    },
+    {
+      "id": "27205",
+      "title": "Inception",
+      "media_type": "movie",
+      "poster": "/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
+      "backdrop": "/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+      "released": "2010-07-15",
+      "createdAt": "2025-04-19T22:27:24.248Z",
+      "updatedAt": "2025-04-19T22:27:24.248Z"
+    },
+    {
+      "id": "284054",
+      "title": "Black Panther",
+      "media_type": "movie",
+      "poster": "/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+      "backdrop": "/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg",
+      "released": "2018-02-13",
+      "createdAt": "2025-04-20T22:46:07.354Z",
+      "updatedAt": "2025-04-20T22:46:07.354Z"
+    },
+    {
+      "id": "46952",
+      "media_type": "tv",
+      "poster": "/4HTfd1PhgFUenJxVuBDNdLmdr0c.jpg",
+      "backdrop": "/2eIlCirgcvEwmCSYh2wDfz5Sxvz.jpg",
+      "released": "2013-09-23",
+      "createdAt": "2025-04-20T22:46:22.614Z",
+      "updatedAt": "2025-04-20T22:46:22.614Z"
+    },
+    {
+      "id": "46952",
+      "media_type": "tv",
+      "poster": "/4HTfd1PhgFUenJxVuBDNdLmdr0c.jpg",
+      "backdrop": "/2eIlCirgcvEwmCSYh2wDfz5Sxvz.jpg",
+      "released": "2013-09-23",
+      "createdAt": "2025-04-20T22:46:23.552Z",
+      "updatedAt": "2025-04-20T22:46:23.552Z"
+    },
+    {
+      "id": "46952",
+      "media_type": "tv",
+      "poster": "/4HTfd1PhgFUenJxVuBDNdLmdr0c.jpg",
+      "backdrop": "/2eIlCirgcvEwmCSYh2wDfz5Sxvz.jpg",
+      "released": "2013-09-23",
+      "createdAt": "2025-04-20T22:46:24.685Z",
+      "updatedAt": "2025-04-20T22:46:24.685Z"
+    },
+    {
+      "id": "46952",
+      "media_type": "tv",
+      "poster": "/4HTfd1PhgFUenJxVuBDNdLmdr0c.jpg",
+      "backdrop": "/2eIlCirgcvEwmCSYh2wDfz5Sxvz.jpg",
+      "released": "2013-09-23",
+      "createdAt": "2025-04-20T22:46:26.426Z",
+      "updatedAt": "2025-04-20T22:46:26.426Z"
+    },
+    {
+      "id": "10796",
+      "title": "The One",
+      "media_type": "movie",
+      "poster": "/gcr3t71KmeXINemMrhaGBGVJPwW.jpg",
+      "backdrop": "/yZzPTih3HQZUBghrWirt0Rk17uE.jpg",
+      "released": "2001-11-02",
+      "createdAt": "2025-04-20T22:46:28.631Z",
+      "updatedAt": "2025-04-20T22:46:28.631Z"
+    },
+    {
+      "id": "10796",
+      "title": "The One",
+      "media_type": "movie",
+      "poster": "/gcr3t71KmeXINemMrhaGBGVJPwW.jpg",
+      "backdrop": "/yZzPTih3HQZUBghrWirt0Rk17uE.jpg",
+      "released": "2001-11-02",
+      "createdAt": "2025-04-20T22:46:32.750Z",
+      "updatedAt": "2025-04-20T22:46:32.750Z"
+    },
+    {
+      "id": "10796",
+      "title": "The One",
+      "media_type": "movie",
+      "poster": "/gcr3t71KmeXINemMrhaGBGVJPwW.jpg",
+      "backdrop": "/yZzPTih3HQZUBghrWirt0Rk17uE.jpg",
+      "released": "2001-11-02",
+      "createdAt": "2025-04-20T22:46:33.546Z",
+      "updatedAt": "2025-04-20T22:46:33.546Z"
+    },
+    {
+      "id": "10796",
+      "title": "The One",
+      "media_type": "movie",
+      "poster": "/gcr3t71KmeXINemMrhaGBGVJPwW.jpg",
+      "backdrop": "/yZzPTih3HQZUBghrWirt0Rk17uE.jpg",
+      "released": "2001-11-02",
+      "createdAt": "2025-04-20T22:46:34.436Z",
+      "updatedAt": "2025-04-20T22:46:34.436Z"
+    },
+    {
+      "id": "10796",
+      "title": "The One",
+      "media_type": "movie",
+      "poster": "/gcr3t71KmeXINemMrhaGBGVJPwW.jpg",
+      "backdrop": "/yZzPTih3HQZUBghrWirt0Rk17uE.jpg",
+      "released": "2001-11-02",
+      "createdAt": "2025-04-20T22:46:35.701Z",
+      "updatedAt": "2025-04-20T22:46:35.701Z"
+    },
+    {
+      "id": "10796",
+      "title": "The One",
+      "media_type": "movie",
+      "poster": "/gcr3t71KmeXINemMrhaGBGVJPwW.jpg",
+      "backdrop": "/yZzPTih3HQZUBghrWirt0Rk17uE.jpg",
+      "released": "2001-11-02",
+      "createdAt": "2025-04-20T22:47:07.988Z",
+      "updatedAt": "2025-04-20T22:47:07.988Z"
+    },
+    {
+      "id": "9806",
+      "title": "The Incredibles",
+      "media_type": "movie",
+      "poster": "/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg",
+      "backdrop": "/se5Hxz7PArQZOG3Nx2bpfOhLhtV.jpg",
+      "released": "2004-10-27",
+      "createdAt": "2025-04-20T22:47:11.696Z",
+      "updatedAt": "2025-04-20T22:47:11.696Z"
+    },
+    {
+      "id": "926393",
+      "title": "The Equalizer 3",
+      "media_type": "movie",
+      "poster": "/b0Ej6fnXAP8fK75hlyi2jKqdhHz.jpg",
+      "backdrop": "/tC78Pck2YCsUAtEdZwuHYUFYtOj.jpg",
+      "released": "2023-08-30",
+      "createdAt": "2025-04-20T22:47:19.379Z",
+      "updatedAt": "2025-04-20T22:47:19.379Z"
+    },
+    {
+      "id": "762509",
+      "title": "Mufasa: The Lion King",
+      "media_type": "movie",
+      "poster": "/lurEK87kukWNaHd0zYnsi3yzJrs.jpg",
+      "backdrop": "/1w8kutrRucTd3wlYyu5QlUDMiG1.jpg",
+      "released": "2024-12-18",
+      "createdAt": "2025-04-20T22:47:22.303Z",
+      "updatedAt": "2025-04-20T22:47:22.303Z"
+    },
+    {
+      "id": "157336",
+      "title": "Interstellar",
+      "media_type": "movie",
+      "poster": "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+      "backdrop": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
+      "released": "2014-11-05",
+      "createdAt": "2025-04-20T22:47:36.418Z",
+      "updatedAt": "2025-04-20T22:47:36.418Z"
+    },
+    {
+      "id": "19995",
+      "title": "Avatar",
+      "media_type": "movie",
+      "poster": "/kyeqWdyUXW608qlYkRqosgbbJyK.jpg",
+      "backdrop": "/vL5LR6WdxWPjLPFRLe133jXWsh5.jpg",
+      "released": "2009-12-15",
+      "createdAt": "2025-04-20T22:47:39.746Z",
+      "updatedAt": "2025-04-20T22:47:39.746Z"
+    }
+  ]
+}
