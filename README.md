@@ -1,5 +1,5 @@
 # Streambase
-🎬 Angular Movie Tracker App
+🎬 Movie Tracker App
 
 A sleek, responsive movie tracking app built with Angular. Users can search for movies, view detailed info, and build a personal watchlist. Powered by modern features, this app integrates with TMBD, public movie API, to deliver real-time data.
 
@@ -12,9 +12,9 @@ A sleek, responsive movie tracking app built with Angular. Users can search for 
 
 ## React
 ### Tech Stack:
-React JS
-Material UI
-JSON server for backend
+React JS  
+Material UI  
+JSON server for backend  
 
 ## Angular
 ### Tech Stack:
