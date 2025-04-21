@@ -1,14 +1,14 @@
 # Streambase
 🎬 Movie Tracker App
 
-A sleek, responsive movie tracking app built with Angular. Users can search for movies, view detailed info, and build a personal watchlist. Powered by modern features, this app integrates with TMBD, public movie API, to deliver real-time data.
+A sleek, responsive movie tracking app. Users can search for movies, view detailed info, and build a personal watchlist. Powered by modern features, this app integrates with TMBD, public movie API, to deliver real-time data.
 
 ### Features:
 🔍 Search movies by title, genre, year of release, and director or actor name.  
 📄 View detailed movie info (cast, ratings, overview)  
 ➕ Add/remove movies from your watchlist, favorites and watch history  
 💾 Persistent storage with localStorage  
-📱 Fully responsive for mobile & desktop
+📱 Fully responsive for tablet & desktop
 
 ## React
 ### Tech Stack:
@@ -28,5 +28,5 @@ Express for backend
 The Movie Database (TMDb) API
 
 ## Before using the app
-Run npm install in both the backend and streambase directories to install all the packages required to run the application
+Run npm install in both the backend and frontend directories to install all the packages required to run the application
 
