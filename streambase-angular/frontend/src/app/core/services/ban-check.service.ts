@@ -35,7 +35,7 @@ export class BanCheckService {
           localStorage.removeItem('user');
           sessionStorage.removeItem('user');
           alert('Your account has been suspended. You have been logged out.');
-          this.router.navigate(['/login']);
+          this.router.navigate(['/']);
         }
       });
   }

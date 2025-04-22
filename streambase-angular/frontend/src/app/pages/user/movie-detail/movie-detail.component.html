@@ -99,7 +99,10 @@
         <!-- Release date -->
         <div class="info-row">
           <span class="label">Release Date: </span>
-          <span class="value">{{ movie()?.release_date || movie()?.first_air_date | date : "MMM d, yyyy" }}</span>
+          <span class="value">{{
+            movie()?.release_date || movie()?.first_air_date
+              | date : "MMM d, yyyy"
+          }}</span>
         </div>
 
         <!-- Status -->
@@ -205,7 +208,7 @@
             />
             }
           </div>
-          } @else { @if(isNewReviewAllow()){
+          } @else { @if(isNewReviewAllow() && !isAdmin()){
           <!--Only show if there are reviews but user has no review on the movie yet and the user is not super admin-->
           <ng-container
             *ngTemplateOutlet="
