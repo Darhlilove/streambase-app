@@ -1,7 +1,4 @@
 import {
-  SharedResizeObserver
-} from "./chunk-HPRR2PZ2.js";
-import {
   CdkPortal,
   CdkPortalOutlet,
   TemplatePortal
@@ -10,6 +7,9 @@ import {
   CdkScrollable,
   ViewportRuler
 } from "./chunk-WJGCHLPZ.js";
+import {
+  SharedResizeObserver
+} from "./chunk-HPRR2PZ2.js";
 import {
   animate,
   state,
@@ -109,11 +109,11 @@ import {
   ɵɵtextInterpolate,
   ɵɵviewQuery
 } from "./chunk-OY5HSDUP.js";
-import "./chunk-ISM5WLAM.js";
 import {
   fromEvent,
   merge
 } from "./chunk-IC62NIWK.js";
+import "./chunk-ISM5WLAM.js";
 import {
   BehaviorSubject,
   EMPTY,

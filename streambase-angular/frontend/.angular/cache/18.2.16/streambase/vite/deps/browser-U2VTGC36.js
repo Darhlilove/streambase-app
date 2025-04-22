@@ -14,8 +14,8 @@ import {
   setClassMetadata,
   ɵɵdefineInjectable
 } from "./chunk-OY5HSDUP.js";
-import "./chunk-ISM5WLAM.js";
 import "./chunk-IC62NIWK.js";
+import "./chunk-ISM5WLAM.js";
 import "./chunk-ZZ67MR3E.js";
 import {
   __objRest,
@@ -4027,4 +4027,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=browser-QM2TCVRC.js.map
+//# sourceMappingURL=browser-U2VTGC36.js.map

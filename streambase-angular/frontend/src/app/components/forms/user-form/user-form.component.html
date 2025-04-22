@@ -43,7 +43,6 @@
       }
     </mat-form-field>
 
-    @if (formType === 'register') {
     <mat-form-field appearance="outline">
       <mat-label>Confirm Password</mat-label>
       <input
@@ -57,7 +56,6 @@
       <mat-error class="error">Please confirm your password</mat-error>
       }
     </mat-form-field>
-    }
   </div>
 
   @if (userForm.errors?.['passwordMismatch'] &&
@@ -87,7 +85,7 @@
       matInput
       formControlName="bio"
       placeholder="Tell us about yourself"
-      rows="4"
+      rows="2"
     ></textarea>
     @if (userForm.get('bio')?.invalid && userForm.get('bio')?.touched) {
     <mat-error class="error">Bio is required</mat-error>

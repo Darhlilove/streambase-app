@@ -25,7 +25,7 @@ export class UserFormComponent implements OnInit {
   private fb = inject(FormBuilder)
 
   @Input() user: User | null = null
-  @Input() formType: "register" | "profile" | "changePassword" = "register"
+  @Input() formType: "register" | "profile" = "register"
   @Input() isSubmitting = false
   @Input() errorMessage = ""
 
@@ -97,7 +97,6 @@ export class UserFormComponent implements OnInit {
     }
 
     this.formSubmit.emit(formData)
-    this.userForm.reset() 
   }
 
   onCancel(): void {

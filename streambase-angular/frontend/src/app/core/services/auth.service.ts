@@ -34,7 +34,7 @@ export class AuthService {
   private api = inject(ApiService);
   private localStorageService = inject(LocalStorageService);
   private router = inject(Router);
-  private banService = inject(BanCheckService)
+  private banService = inject(BanCheckService);
 
   // Signals for reactive state management for user
   private localStorageUser =
@@ -61,10 +61,7 @@ export class AuthService {
    * @returns The stored user or null if no user is found.
    */
   private getStoredUser(): any | null {
-    return (
-      this.localStorageUser.get() ||
-      this.sessionStorageUser.get()
-    );
+    return this.localStorageUser.get() || this.sessionStorageUser.get();
   }
 
   /**
@@ -92,7 +89,7 @@ export class AuthService {
   }
 
   getAdmin(): any | null {
-    return this.localStorageAdmin.get() || this.sessionStorageAdmin.get()
+    return this.localStorageAdmin.get() || this.sessionStorageAdmin.get();
   }
 
   /**
@@ -144,7 +141,10 @@ export class AuthService {
           error.message || 'Sign up failed! Please try again later.'
         );
         return throwError(
-          () => new Error('Sign up failed! Please try again later.')
+          () =>
+            new Error(
+              error.message || 'Sign up failed! Please try again later.'
+            )
         );
       })
     );
@@ -304,7 +304,7 @@ export class AuthService {
       this.localStorageToken.set(null);
       this.sessionStorageUser.set(null);
       this.sessionStorageToken.set(null);
-      this.banService.stop()
+      this.banService.stop();
       this.router.navigate(['/sign-in']);
     }
   }
@@ -327,35 +327,31 @@ export class AuthService {
 
     this._isLoading.set(true);
 
-    return this.api
-      .patch<User>(`/${endpoint}/${user.id}`, formData)
-      .pipe(
-        map((updatedUser) => {
-          return {
-            id: updatedUser.id,
-            name: updatedUser.firstName + ' ' + updatedUser.lastName,
-            email: updatedUser.email,
-            image: updatedUser.image || null,
-          };
-        }),
-        tap((userData) => {
-          this._isLoading.set(false);
-          if (endpoint === 'users') {
-            this.localStorageUser.set(userData);
-          }
-        }),
-        catchError((error) => {
-          this._isLoading.set(false);
-          this.error.set(
-            error.message ||
-              'User profile update failed! Please try again later.'
-          );
-          return throwError(
-            () =>
-              new Error('User profile update failed! Please try again later.')
-          );
-        })
-      );
+    return this.api.patch<User>(`/${endpoint}/${user.id}`, formData).pipe(
+      map((updatedUser) => {
+        return {
+          id: updatedUser.id,
+          name: updatedUser.firstName + ' ' + updatedUser.lastName,
+          email: updatedUser.email,
+          image: updatedUser.image || null,
+        };
+      }),
+      tap((userData) => {
+        this._isLoading.set(false);
+        if (endpoint === 'users') {
+          this.localStorageUser.set(userData);
+        }
+      }),
+      catchError((error) => {
+        this._isLoading.set(false);
+        this.error.set(
+          error.message || 'User profile update failed! Please try again later.'
+        );
+        return throwError(
+          () => new Error('User profile update failed! Please try again later.')
+        );
+      })
+    );
   }
 
   /**
@@ -440,7 +436,8 @@ export class AuthService {
    */
   deleteProfile(password: string): Observable<void> {
     this._isLoading.set(true);
-    const currentUser = this.localStorageUser.get() || this.sessionStorageUser.get()
+    const currentUser =
+      this.localStorageUser.get() || this.sessionStorageUser.get();
 
     if (!currentUser?.email) {
       this._isLoading.set(false);
@@ -449,7 +446,11 @@ export class AuthService {
 
     // Filter user by email and password
     return this.api
-      .get<User[]>(`/users?email=${encodeURIComponent(currentUser.email)}&password=${encodeURIComponent(password)}`)
+      .get<User[]>(
+        `/users?email=${encodeURIComponent(
+          currentUser.email
+        )}&password=${encodeURIComponent(password)}`
+      )
       .pipe(
         switchMap((matchedUsers) => {
           const user = matchedUsers[0];
@@ -481,7 +482,6 @@ export class AuthService {
         })
       );
   }
-
 
   /**
    * Fetches user data based on the stored user ID.
