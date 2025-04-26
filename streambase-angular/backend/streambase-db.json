@@ -14,6 +14,18 @@
   "archived-admin": [],
   "users": [
     {
+      "id": "1745329996810",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "example@mail.com",
+      "password": "JohnDoe1",
+      "dateOfBirth": "2025-04-09T04:00:00.000Z",
+      "bio": "Cool and demure!",
+      "moviePreferences": [
+        "animation"
+      ]
+    },
+    {
       "id": "6868",
       "firstName": "Mac",
       "lastName": "Zuck",
