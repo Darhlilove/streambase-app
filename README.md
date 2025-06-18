@@ -10,19 +10,21 @@ A sleek, responsive movie tracking app. Users can search for movies, view detail
 💾 Persistent storage with localStorage  
 📱 Fully responsive for tablet & desktop
 
-## React [View app](https://streambase-react-app.onrender.com)
+## React
 ### Tech Stack:
 React JS  
 Material UI  
 JSON server for backend  
+[View app](https://streambase-react-app.onrender.com)
 
-## Angular [View app](https://streambase-app.onrender.com)
+## Angular 
 ### Tech Stack:
 Angular 18  
 TypeScript  
 RxJS  
 SCSS  
-Express for backend
+Express for backend  
+[View app](https://streambase-app.onrender.com)
 
 ## API
 The Movie Database (TMDb) API
