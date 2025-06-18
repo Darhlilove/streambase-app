@@ -21,7 +21,7 @@ JSON server for backend
 Angular 18  
 TypeScript  
 RxJS  
-SCSS
+SCSS  
 Express for backend
 
 ## API
