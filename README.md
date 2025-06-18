@@ -10,13 +10,13 @@ A sleek, responsive movie tracking app. Users can search for movies, view detail
 💾 Persistent storage with localStorage  
 📱 Fully responsive for tablet & desktop
 
-## React
+## React [View app](https://streambase-react-app.onrender.com)
 ### Tech Stack:
 React JS  
 Material UI  
 JSON server for backend  
 
-## Angular
+## Angular [View app](https://streambase-app.onrender.com)
 ### Tech Stack:
 Angular 18  
 TypeScript  
