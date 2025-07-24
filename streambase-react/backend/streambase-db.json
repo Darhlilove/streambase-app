@@ -153,6 +153,7 @@
       "name": "Jane Smith",
       "image": "https://cdn.jsdelivr.net/gh/alohe/avatars/png/vibrent_2.png",
       "email": "janesmith@gmail.com",
+      "password":"JaneSmith123",
       "watchList": [
         {
           "id": 285,
