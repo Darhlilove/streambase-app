@@ -12,7 +12,8 @@ A sleek, responsive movie tracking app. Users can search for movies, view detail
 
 ## React
 ### Tech Stack:
-React JS  
+React
+Redux
 Material UI  
 JSON server for backend  
 [View app](https://streambase-react-app.onrender.com)
