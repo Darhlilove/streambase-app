@@ -39,7 +39,7 @@ export class AdminUsersManagementComponent implements OnInit {
   pageSizeOptions = [20, 50, 100];
   
   // Table columns
-  displayedColumns: string[] = ['name', 'email', 'password', 'status', 'privilege', 'actions'];
+  displayedColumns: string[] = ['name', 'email', 'status', 'privilege', 'actions'];
 
   // Header visibility
   hideHeader = false;
