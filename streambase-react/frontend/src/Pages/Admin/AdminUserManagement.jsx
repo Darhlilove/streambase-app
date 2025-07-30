@@ -288,7 +288,6 @@ const AdminUsersManagement = () => {
                                         <SortBy handleSort={handleSortByName} a={"asc"} b={"desc"} />
                                     </TableCell>
                                     <TableCell align={"center"} sx={{ fontWeight: "bold", fontSize: "18px", alignItems: "center"}}>Email</TableCell>
-                                    <TableCell align={"center"} sx={{ fontWeight: "bold", fontSize: "18px", alignItems: "center"}}>Password</TableCell>
                                     <TableCell align={"center"} sx={{ fontWeight: "bold", fontSize: "18px", alignItems: "center"}}>
                                         Status
                                         <SortBy handleSort={handleSortByUserStatus} a={"active"} b={"suspended"} />
@@ -306,7 +305,6 @@ const AdminUsersManagement = () => {
                                     <TableRow key={user.id}>
                                         <TableCell sx={{ fontSize: "16px"}}>{user.name}</TableCell>
                                         <TableCell align="center" sx={{ fontSize: "16px"}}>{user.email}</TableCell>
-                                        <TableCell align="center" sx={{ fontSize: "16px"}}>{user.password || "No password set"}</TableCell>
                                         <TableCell align="center" sx={{ fontSize: "16px"}}>{user.suspended ? "Suspended" : "Active"}</TableCell>
                                         <TableCell align="center" sx={{ fontSize: "16px"}}>{user.privilege ? "Admin " + user.privilege : "User"}</TableCell>
                                         <TableCell align="center" sx={{ fontSize: "16px"}}>
