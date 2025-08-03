@@ -687,6 +687,32 @@ const UserForm = ({isManageProfile = false, isSignUp = false, isSignIn = false, 
                             />
                         )}
 
+                        {(isSignIn || isAdmin) && (
+                            <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                                <Checkbox
+                                    onChange={(e) => {
+                                        if (e.target.checked) {
+                                            setFormData({
+                                                ...formData,
+                                                email: 'janesmith@example.com',
+                                                password: 'JaneSmith123'
+                                            });
+                                        } else {
+                                            setFormData({
+                                                ...formData,
+                                                email: '',
+                                                password: ''
+                                            });
+                                        }
+                                    }}
+                                    sx={{ padding: '4px' }}
+                                />
+                                <Typography variant="body2" sx={{ fontSize: '0.875rem' }}>
+                                    Use Test Login
+                                </Typography>
+                            </Box>
+                        )}
+
                         <TextField
                             required
                             label="Email"

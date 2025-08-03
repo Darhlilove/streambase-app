@@ -10,6 +10,16 @@
     </p>
 
     <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="sign-in-form">
+      @if(!isAdmin()) {
+      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+        <mat-checkbox
+          (change)="useTestLogin($event.checked)"
+          color="primary"
+        ></mat-checkbox>
+        <span style="font-size: 0.875rem; margin-left: 8px;">Use Test Login</span>
+      </div>
+      }
+      
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Email</mat-label>
         <input

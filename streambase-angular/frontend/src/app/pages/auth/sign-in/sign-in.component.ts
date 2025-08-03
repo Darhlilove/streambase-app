@@ -111,4 +111,18 @@ export class SignInComponent implements OnInit {
     // If the user is not an admin, navigate to the regular sign-up page
     this.router.navigate(['/sign-up']);
   }
+
+  useTestLogin(checked: boolean): void {
+    if (checked) {
+      this.signInForm.patchValue({
+        email: 'example@mail.com',
+        password: 'JohnDoe1'
+      });
+    } else {
+      this.signInForm.patchValue({
+        email: '',
+        password: ''
+      });
+    }
+  }
 }
